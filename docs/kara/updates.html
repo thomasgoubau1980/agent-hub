@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kara · Release notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
+  --line:#D8DCD9; --accent:#01977C; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
+  --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
+  --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
+  --line:#2C3441; --accent:#5FCDB4; --accent-ink:#0F1420; --code-bg:#202734;
+  --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
+  --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
+  --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
+} }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+code, .mono { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  font-size:0.86em; background:var(--code-bg); padding:1px 5px; border-radius:3px; }
+.mono { background:none; padding:0; }
+.nav { position:sticky; top:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line); display:flex; gap:4px; flex-wrap:wrap;
+  align-items:center; padding:10px clamp(16px,6vw,64px); }
+.nav a { font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:0.04em;
+  color:var(--ink-soft); text-decoration:none; padding:4px 10px; border-radius:999px; }
+.nav a:hover, .nav a.on { color:var(--accent); background:var(--panel); }
+.wrap { max-width:760px; margin:0 auto; padding:0 clamp(16px,6vw,32px) 96px; }
+header.masthead { padding-top:52px; }
+.eyebrow { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); }
+h1 { font-family:"Archivo",sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px);
+  line-height:1.05; letter-spacing:-0.015em; margin:10px 0 14px; text-wrap:balance; }
+h2 { font-family:"Archivo",sans-serif; font-weight:650; font-size:24px;
+  letter-spacing:-0.01em; line-height:1.25; margin:44px 0 10px; }
+h3 { font-family:"Archivo",sans-serif; font-weight:600; font-size:18px; margin:28px 0 8px; }
+.lede { font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0; }
+.badge { display:inline-flex; align-items:center; gap:6px; padding:3px 10px;
+  border-radius:999px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  font-weight:600; letter-spacing:0.04em; background:var(--panel); color:var(--ink-soft);
+  border:1px solid var(--line); }
+.badge.acc { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.strip { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; margin-top:22px; }
+section.rel { margin-top:56px; padding-top:8px; }
+.sec-num { font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;
+  letter-spacing:0.06em; color:var(--ink-soft); }
+.sec-num b { color:var(--accent); font-weight:600; }
+section.rel h2 { margin:6px 0 8px; }
+.sec-sub { margin:0 0 18px; max-width:64ch; color:var(--ink-soft); font-size:15.5px; }
+ul, ol { padding-left:22px; margin:0 0 16px; }
+li { margin:6px 0; }
+li strong { color:var(--ink); }
+p { max-width:66ch; }
+blockquote { margin:16px 0; padding:10px 16px; border-left:3px solid var(--accent);
+  background:var(--panel); border-radius:0 8px 8px 0; color:var(--ink-soft); }
+.tablewrap { overflow-x:auto; margin:16px 0; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; }
+th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+  border-bottom:2px solid var(--line); padding:8px 12px 6px 0; }
+td { border-bottom:1px solid var(--line); padding:9px 12px 9px 0; vertical-align:top; }
+figure.shot { margin:22px 0; }
+figure.shot img { max-width:100%; border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); display:block; }
+figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-soft); margin-top:8px; }
+.duo { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:26px; align-items:start; }
+@media (max-width:780px) { .duo { grid-template-columns:1fr; } }
+.notes { display:flex; flex-direction:column; gap:12px; }
+.note { padding:13px 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:14px; font-size:14.5px; }
+.note b { display:block; margin-bottom:3px; }
+.note span { color:var(--ink-soft); }
+.try { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px; margin-top:36px; }
+.card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
+  box-shadow:var(--shadow); border-top:3px solid var(--card-accent, var(--accent));
+  transition:transform 0.12s ease; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { margin:0 0 6px; font-size:22px; }
+.card .tag { color:var(--ink-soft); font-size:14.5px; margin:0 0 14px; min-height:44px; }
+.card .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.card .links { margin-top:16px; display:flex; gap:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; }
+.card .links span { color:var(--card-accent, var(--accent)); }
+footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="../index.html">AGENT HUB</a><a href="index.html" class="">GUIDE</a><a href="updates.html" class="on">RELEASE NOTES</a></nav>
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Kara · Release notes</span>
+  <h1>What shipped</h1>
+  <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork. Newest first.</p>
+  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: iPhone &amp; iPad build 19 · 26 August 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
+</header>
+
+<section class="rel" id="iphone-ipad-build-19">
+  <div class="sec-num"><b>IPHONE &amp; IPAD BUILD 19</b> · 26 AUG 2026</div>
+  <h2>Release notes live inside the iOS app too</h2>
+  <p class="sec-sub">Same day as the desktop version: updates now have a home inside Kara on iPhone and iPad.</p>
+  
+  
+  <div class="notes"><div class="note"><b>Profile gets an Updates card</b><span>your version and build, the latest release's title, and a green dot when something new landed since you last looked.</span></div>
+<div class="note"><b>iPhone</b><span>the Updates screen is a feed of cards with a Desktop / iPad &amp; iPhone filter; the newest entry opens expanded and any card expands in place.</span></div>
+<div class="note"><b>iPad</b><span>the same screen becomes master-detail: releases on the left, the selected entry's full notes on the right.</span></div>
+<div class="note"><span>Works offline from the last fetched feed, and everything reads the same published notes as <a href="https://thomasgoubau1980.github.io/kara-updates/">the public updates page</a>.</span></div></div>
+</section>
+
+<section class="rel" id="v0.2.17">
+  <div class="sec-num"><b>V0.2.17</b> · 26 AUG 2026</div>
+  <h2>Release notes live inside the app</h2>
+  <p class="sec-sub">Updates now have a home under Profile, so you can see what changed without leaving Kara.</p>
+  
+  
+  <div class="notes"><div class="note"><b>A new Updates page</b><span>(Profile, then "See all updates"): every release with its notes, a Desktop / iPad &amp; iPhone filter, and a status strip showing your version with "Check now" and "Update &amp; restart" right there.</span></div>
+<div class="note"><b>The Profile card got smarter.</b><span>The old "App update" card became an Updates card: up-to-date status, the two latest releases as tappable rows, and a green dot for anything you have not seen yet. The same dot appears on Profile in the sidebar.</span></div>
+<div class="note"><b>One feed everywhere.</b><span>The page reads the same published feed as <a href="https://thomasgoubau1980.github.io/kara-updates/">the public updates page</a>, cached for offline. The iPhone and iPad apps are getting the same screen.</span></div></div>
+</section>
+
+<section class="rel" id="ipad-builds-17-18">
+  <div class="sec-num"><b>IPAD BUILDS 17-18</b> · 25 AUG 2026</div>
+  <h2>The iPad becomes an all-day hub</h2>
+  <p class="sec-sub">Kara on iPad (via TestFlight) turns into a surface that can stay open all day. The day itself is the wide column, your personal layer sits in a fixed rail, and one button drops you into full focus.</p>
+  
+  
+  <div class="duo"><div class="mockcol"><p class="try">The hub: NOW hero, day stream, personal rail</p>
+        <div class="mock" style="padding: 14px">
+          <div style="display: flex; gap: 10px">
+            <div style="flex: 1.6; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+              <div style="background: var(--ink); border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 10px">
+                <div style="flex: 1; min-width: 0">
+                  <div class="mono" style="font-size: 8.5px; font-weight: 700; color: #3bf2d1; letter-spacing: 0.08em">NOW · 14:00 – 14:45</div>
+                  <div style="font-size: 12px; font-weight: 800; color: var(--paper); white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Euroports — coordination</div>
+                </div>
+                <span style="flex-shrink: 0; background: var(--green); color: #fff; border-radius: 999px; padding: 5px 11px; font-size: 10px; font-weight: 700">◎ Focus</span>
+              </div>
+              <div style="border: 1.5px solid var(--green); border-radius: 12px; padding: 8px 11px">
+                <div class="mono" style="font-size: 8.5px; font-weight: 700; color: var(--green); letter-spacing: 0.08em">TO VALIDATE · 3</div>
+                <div style="display: flex; align-items: center; gap: 7px; margin-top: 5px">
+                  <span style="flex: 1; font-size: 10.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Préparer la revue CPD score</span>
+                  <span style="width: 17px; height: 17px; border-radius: 999px; background: var(--green-soft); color: var(--green); font-size: 9px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center">✓</span>
+                  <span style="width: 17px; height: 17px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink55); font-size: 8px; display: inline-flex; align-items: center; justify-content: center">⏰</span>
+                  <span style="width: 17px; height: 17px; border-radius: 999px; border: 1px solid var(--alert); color: var(--alert); font-size: 8px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center">✕</span>
+                </div>
+              </div>
+              <div style="border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+                  <span style="font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span class="mono" style="font-size: 8.5px; color: var(--ink55)">09:30</span> Schréder — 1:1</span>
+                  <span class="mono" style="flex-shrink: 0; font-size: 8px; font-weight: 700; background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 2px 7px">Fathom ↗</span>
+                </div>
+                <div style="font-size: 9.5px; color: var(--ink55); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Aligned with Claudia on the year-end cycle…</div>
+              </div>
+            </div>
+            <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+              <div style="border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px">
+                <div class="mono" style="font-size: 8.5px; font-weight: 700; color: var(--ink55); letter-spacing: 0.08em">GOALS OF THE WEEK</div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 5px"><span style="width: 12px; height: 12px; border-radius: 999px; background: var(--green); flex-shrink: 0"></span><span style="font-size: 10px; font-weight: 600; color: var(--ink55); text-decoration: line-through; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Close the f&amp;i tranche</span></div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px"><span style="width: 12px; height: 12px; border-radius: 999px; border: 1.5px solid var(--line); flex-shrink: 0"></span><span style="font-size: 10px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ship the Afflelou scan</span></div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px"><span style="width: 12px; height: 12px; border-radius: 999px; border: 1.5px solid var(--line); flex-shrink: 0"></span><span style="font-size: 10px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Diary live everywhere</span></div>
+              </div>
+              <div style="flex: 1; border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px; background: repeating-linear-gradient(var(--surface) 0 14px, var(--sink) 14px 15px)">
+                <div class="mono" style="font-size: 8.5px; font-weight: 700; color: var(--ink55); letter-spacing: 0.08em">NOTE TO SELF</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="try" style="margin-top: 18px">Full Focus: the timer becomes a place</p>
+        <div class="mock" style="background: var(--ink); border: none; padding: 18px; display: flex; align-items: center; gap: 16px">
+          <svg width="64" height="64" viewBox="0 0 64 64" style="flex-shrink: 0">
+            <circle cx="32" cy="32" r="27" fill="none" stroke="rgba(247,249,252,0.12)" stroke-width="5"></circle>
+            <circle cx="32" cy="32" r="27" fill="none" stroke="#01977c" stroke-width="5" stroke-linecap="round" stroke-dasharray="170" stroke-dashoffset="55" transform="rotate(-90 32 32)"></circle>
+          </svg>
+          <div style="min-width: 0">
+            <div class="mono" style="font-size: 22px; font-weight: 700; color: #f7f9fc">17:24</div>
+            <div style="font-size: 11px; font-weight: 700; color: rgba(247,249,252,0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Afflelou expectation scan — first draft</div>
+            <div class="mono" style="font-size: 8.5px; font-weight: 700; color: rgba(247,249,252,0.4); margin-top: 2px">NEXT · 18:30 PADEL</div>
+          </div>
+          <span style="margin-left: auto; flex-shrink: 0; background: var(--green); color: #fff; border-radius: 999px; padding: 7px 13px; font-size: 10.5px; font-weight: 700">✓ Done</span>
+        </div>
+</div><div class="notes"><div class="note"><b>The NOW hero</b><span>always answers one question: what is now? In a meeting it shows the meeting and what comes next; between meetings, the next thing with a countdown; on a clear day, your first open Top 3 task.</span></div>
+<div class="note"><b>The day stream</b><span>date header, hero, agenda, then the diary of finished meetings with their recording links and the tasks Kara caught, one tap each to approve, defer or reject.</span></div>
+<div class="note"><b>The personal rail never moves</b><span>goals of the week with tick-through (build 18 swapped these in for the duplicate Top 3, which already lives in the day column), your ruled note to self, and the Pencil sketch.</span></div>
+<div class="note"><b>Full Focus</b><span>the Focus button starts a pomodoro on your top open task and takes over the screen. The ring, the one task, pause and "Done, tick it off" writing through to Todoist, with a quiet footer naming what is next.</span></div>
+<div class="note"><b>Also in these builds</b><span>the Day Surface diary on iPhone and iPad, and the cloud-sync guard that stops older builds from deleting diary data. If the diary looks empty right after updating, it fills in at the next Kara sweep.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.16">
+  <div class="sec-num"><b>V0.2.16</b> · 25 AUG 2026</div>
+  <h2>Every "+N more" now expands</h2>
+  <p class="sec-sub">Truncated lists across the app behaved like dead text. They are now one shared control: a full-width "+N more" button with a chevron that expands the list in place, then collapses it with "Show less".</p>
+  
+  
+  <div class="duo"><div class="mockcol"><p class="try">"+N more" is now a real control</p>
+<div class="mock" style="padding: 18px 20px 14px;">
+  <div class="f-label">Your day · agenda</div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line);">
+    <span class="mono" style="width: 58px; flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--ink55);">9:30</span>
+    <span style="font-size: 14px; font-weight: 600;">(no title)</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line);">
+    <span class="mono" style="width: 58px; flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--ink55);">10:00</span>
+    <span style="font-size: 14px; font-weight: 600;">Placeholder - reconnect Q7Leader x Equans</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0;">
+    <span class="mono" style="width: 58px; flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--ink55);">11:30</span>
+    <span style="font-size: 14px; font-weight: 600;">Focus block</span>
+  </div>
+  <div class="mono" style="display: flex; align-items: center; gap: 7px; padding: 11px 0 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 700; color: var(--ink55);">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    +6 more
+  </div>
+</div>
+<p class="try" style="margin-top: 18px;">One tap later</p>
+<div class="mock" style="padding: 18px 20px 14px;">
+  <div style="display: flex; align-items: center; gap: 12px; padding: 2px 0 9px; border-bottom: 1px solid var(--line);">
+    <span class="mono" style="width: 58px; flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--ink55);">12:30</span>
+    <span style="font-size: 14px; font-weight: 600;">Point site web Léo - Hélène</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0;">
+    <span class="mono" style="width: 58px; flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--ink55);">3:30</span>
+    <span style="font-size: 14px; font-weight: 600;">Q7Leader &lt;&gt; Afflelou Expectation Scan</span>
+  </div>
+  <div class="mono" style="display: flex; align-items: center; gap: 7px; padding: 11px 0 4px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 700; color: var(--ink);">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);"><path d="m6 9 6 6 6-6"/></svg>
+    Show less
+  </div>
+</div>
+</div><div class="notes"><div class="note"><b>Today screen</b><span>the Day agenda, the Tasks lane, and the diary's "Coming up" list all expand past their first six rows (Coming up previously truncated without even showing a count).</span></div>
+<div class="note"><b>Planner timeboxes</b><span>"+N more" inside a slot block is now a visible button that opens the slot window with the full task list. The block's height is its time range, so it opens rather than grows.</span></div>
+<div class="note"><b>Daily reset, "Pick the 3"</b><span>the from-active-projects list was silently capped at eight; it now shows "+N more" and expands.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.15">
+  <div class="sec-num"><b>V0.2.15</b> · 25 AUG 2026</div>
+  <h2>Dropping a task on a timebox now actually nests it</h2>
+  <p class="sec-sub">The one that made timeboxing feel broken. Dropping a task onto a slot fired two handlers: the slot nested the task, then the same drop event reached the day column underneath, which pulled the task straight back out and planted it as a big standalone card at the mouse position. So tasks never stayed inside a timebox, no matter how precisely you dropped them.</p>
+  
+  <p>This release also bundles two changes shipped in parallel:</p>
+  <div class="duo"><div class="mockcol"><p class="try">Drop a task on a timebox, it stays</p>
+<div class="mock planner">
+  <div class="grid" style="height: 130px;">
+    <div class="gutter">
+      <span style="top: 0">1:00</span><span style="top: 60px">2:00</span><span style="top: 120px">3:00</span>
+    </div>
+    <div class="col">
+      <div class="hline" style="top: 0"></div><div class="hline" style="top: 60px"></div><div class="hline" style="top: 120px"></div>
+      <div class="slot" style="top: 22px; height: 74px;">
+        <div class="kind">Focus <span style="margin-left: auto; letter-spacing: 0; text-transform: none;">1/3</span></div>
+        <div class="task"><i style="border-color: var(--green); background: var(--green);"></i> <span style="text-decoration: line-through; color: var(--ink55);">Vérifier la convention de prêt</span></div>
+        <div class="task"><i></i> Créer le mot de passe Mon Racing</div>
+        <div class="task"><i></i> Planification visite des lieux</div>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <span class="lg"><span class="sw s"></span><b>Nested rows</b> dropped tasks stay inside the box</span>
+    <span class="lg"><span class="sw t"></span><b>Stray cards</b> drag them in to tuck them away</span>
+  </div>
+</div>
+</div><div class="notes"><div class="note"><span>Drops on a slot now stop at the slot: the task nests as a compact row inside the timebox, exactly like the design.</span></div>
+<div class="note"><span>Standalone timed cards are now draggable: drag a stray card onto a slot to tuck it in, or elsewhere on the timeline to move it.</span></div>
+<div class="note"><span>Double-clicking a slot no longer also creates a phantom new slot underneath it (same event-bubbling family).</span></div>
+<div class="note"><b>Day Surface diary.</b><span>The Today screen's Day lane renders the sweep-authored day log: finished meetings appear as diary cards with recorder summary and Fathom/Granola deep links, plus one-tap triage of the tasks Kara caught.</span></div>
+<div class="note"><b>Cloud sync fix.</b><span>The sync layer no longer records or tombstones data kinds it doesn't know, which was clobbering newly written dayLogs rows minutes after they were created.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.14">
+  <div class="sec-num"><b>V0.2.14</b> · 25 AUG 2026</div>
+  <h2>Your meetings become the day's diary</h2>
+  <p class="sec-sub">The Today screen's Day lane now tells the story of your day, not just the plan. As recorded meetings finish, they appear as diary cards: the time, a short summary from Fathom or Granola, a chip that opens the recording, and the tasks Kara caught underneath.</p>
+  
+  <p>The same diary shipped on iPhone and iPad (TestFlight builds 15 to 17), where the iPad also got its new all-day hub layout. The data comes from the Kara sweep: zero extra tokens, one shared day log entity synced everywhere.</p>
+  <div class="duo"><div class="mockcol"><p class="try">A finished meeting, as the diary tells it</p>
+        <div class="mock" style="padding: 16px 18px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px">
+            <span style="font-size: 14px; font-weight: 800; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span class="mono" style="font-size: 10px; color: var(--ink55); font-weight: 700">09:30</span>&nbsp; Schréder ↔ Q7Leader — 1:1</span>
+            <span class="mono" style="flex-shrink: 0; font-size: 9.5px; font-weight: 700; background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 3px 9px">Fathom ↗</span>
+          </div>
+          <p style="margin: 7px 0 10px; font-size: 12px; line-height: 1.5; color: var(--ink55)">Aligned with Claudia on the year-end performance cycle: Q7Leader hosts the global-score comparison. Claudia needs the compliance pack before Friday.</p>
+          <div class="mono" style="font-size: 9px; font-weight: 700; color: var(--ink55); letter-spacing: 0.08em">CAME OUT OF THIS MEETING · 3</div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line)">
+            <span style="flex: 1; font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Préparer la revue CPD score pour vendredi</span>
+            <span style="width: 22px; height: 22px; border-radius: 999px; background: var(--green-soft); color: var(--green); font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0">✓</span>
+            <span style="width: 22px; height: 22px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink55); font-size: 10px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0">⏰</span>
+            <span style="width: 22px; height: 22px; border-radius: 999px; border: 1px solid var(--alert); color: var(--alert); font-size: 10px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0">✕</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line)">
+            <span style="flex: 1; font-size: 12px; font-weight: 600; color: var(--ink55); text-decoration: line-through; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Envoyer le compliance pack à Claudia</span>
+            <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; background: var(--green-soft); color: var(--green); border-radius: 999px; padding: 3px 9px">✓ Approved → Inbox</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0">
+            <span style="flex: 1; font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Confirmer l'accès RDP sandbox</span>
+            <span style="flex-shrink: 0; font-size: 10px; font-weight: 700; background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 3px 9px">⏳ Waiting · Stijn</span>
+          </div>
+        </div>
+        <p class="try" style="margin-top: 18px">A past day's recap line</p>
+        <div class="mock" style="padding: 12px 18px; display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 12px; color: var(--ink55)">
+          <span>3 meetings · 6 tasks came out</span>
+          <span style="color: var(--green); font-weight: 700">4 handled</span>
+          <span style="color: var(--blue); font-weight: 700">1 waiting</span>
+          <span>1 skipped</span>
+        </div>
+</div><div class="notes"><div class="note"><b>To validate, in one place.</b><span>A green recap card at the top collects every task still waiting for your decision, from meetings and email alike. One tap each: approve to Inbox, edit, later, or reject. No double-clicks anywhere.</span></div>
+<div class="note"><b>Statuses stay live.</b><span>Each caught task shows where it is right now: Approved, Filed with its project, Waiting on a person, Done, or Skipped. The diary resolves this from Todoist every time you open it, so it never goes stale.</span></div>
+<div class="note"><b>Past days are the record.</b><span>Page back with the date arrows and you see what happened that day and where every task landed, plus your note to self.</span></div>
+<div class="note"><b>Cloud sync hardened.</b><span>Older app versions were quietly deleting data kinds they did not recognise, which wiped fresh diary entries minutes after they were written. Every app now leaves unknown data alone, and the sweep re-writes the full day a few times a day as a safety net.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.13">
+  <div class="sec-num"><b>V0.2.13</b> · 25 AUG 2026</div>
+  <h2>Planner fixes: slot tasks stay put, overlaps untangle, tasks open from anywhere</h2>
+  <p class="sec-sub">Fixes from the first day of planning with 0.2.12.</p>
+  
+  
+  <div class="duo"><div class="mockcol"><p class="try">Overlaps now share the column</p>
+        <div class="mock planner">
+          <div class="grid" style="height: 150px;">
+            <div class="gutter">
+              <span style="top: 0">1:00</span><span style="top: 60px">2:00</span><span style="top: 120px">3:00</span>
+            </div>
+            <div class="col">
+              <div class="hline" style="top: 0"></div><div class="hline" style="top: 60px"></div><div class="hline" style="top: 120px"></div>
+              <div class="mtg" style="top: 20px; height: 60px; right: auto; width: calc(50% - 8px);">
+                <div class="t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4m8-4v4M3 11h18"/></svg><span>Point site web</span></div>
+                <div class="when">1:20–2:20</div>
+              </div>
+              <div class="ttask" style="top: 50px; height: 45px; left: calc(50% + 4px); right: 4px;">
+                <div class="task"><i></i> Créer le mot de passe</div>
+              </div>
+              <div class="ttask" style="top: 105px; height: 40px;">
+                <div class="task"><i></i> Planification visite des lieux</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="try" style="margin-top: 18px;">The task window's new Planned row</p>
+        <div class="mock" style="padding: 16px 20px;">
+          <div class="f-label">Planned</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; border-radius: 11px; background: var(--sink); padding: 10px 13px;">
+            <span style="font-size: 13.5px; font-weight: 700;">In "Focus block" · 1:30 PM–3:30 PM</span>
+            <span style="flex-shrink: 0; border: 1.5px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; color: var(--ink55);">Back to day plan</span>
+          </div>
+        </div>
+</div><div class="notes"><div class="note"><b>Tasks added to a slot no longer disappear.</b><span>Two bugs compounded: tasks created inside a slot never reached Todoist (so the next sync deleted them), and every sync minted new internal ids for all tasks (so slots lost track of the tasks they held, and timed placements were wiped). Slot-created tasks now write through to Todoist with the slot's day as due date, and the sync keeps task identity stable, so slots and planned times survive every refresh.</span></div>
+<div class="note"><b>Overlapping cards untangle.</b><span>Meetings and timed tasks that overlap in time now share the column side by side, calendar style, instead of stacking on top of each other.</span></div>
+<div class="note"><b>Every task on the timeline opens the task window.</b><span>Click a task's title inside a slot block, in the slot detail, or on a timed card and the unified task window opens, with a new "Planned" row showing where the task sits and a "Back to day plan" button that decouples it from the slot or its time and returns it to the To plan tray.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.12">
+  <div class="sec-num"><b>V0.2.12</b> · 25 AUG 2026</div>
+  <h2>One task window everywhere, and meetings on the Plan-the-day timeline</h2>
+  <p class="sec-sub">Two changes that make planning the day feel like one app instead of five screens.</p>
+  
+  <p><strong>One task window, everywhere.</strong> Click any task title, in any view (Today, Overview, Daily reset, Projects, Areas, Weekly Review, the planner) and the same task window opens. It now carries the three actions that used to be scattered across views:</p>
+<p><strong>Meetings on the Plan-the-day timeline.</strong> Google Calendar sync was already working, but the planner never read the events. The Daily reset's "Plan the day" step and the Overview Agenda tab now draw meetings as read-only blue blocks on the timeline, so the day can be planned around them. Declined invites and all-day events are skipped, and dragging tasks still works everywhere, even over a meeting block.</p>
+  <div class="duo"><div class="mockcol"><p class="try">Try it · faithful mockup</p>
+        <div class="mock">
+          <div class="mock-title">Task <span class="mock-x">✕</span></div>
+          <div class="mock-body">
+            <button type="button" class="tick-row" id="tick" aria-pressed="false">
+              <span class="circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="tick-label" id="tickLabel">Mark as done</span>
+            </button>
+            <div>
+              <div class="f-label">Task</div>
+              <div class="f-input">Send Q7 proposal to Lenka</div>
+            </div>
+            <div>
+              <div class="f-label">Note</div>
+              <div class="f-input muted">Attach the updated pricing sheet</div>
+            </div>
+            <div>
+              <div class="f-label">When</div>
+              <div class="f-input f-select">Today <span style="color: var(--ink55)">▾</span></div>
+            </div>
+            <div>
+              <div class="f-label">Priority</div>
+              <div class="pchips">
+                <button type="button" class="pchip g" id="top3" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+                  <span>Top 3 today</span>
+                </button>
+                <button type="button" class="pchip b" id="goal" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15V4h13l-2.5 4L17 12H6"/><path d="M4 15v6"/></svg>
+                  <span>Make goal of the week</span>
+                </button>
+              </div>
+            </div>
+            <div class="mock-actions">
+              <button type="button" class="btn-save">Save</button>
+              <button type="button" class="btn-trash" title="Delete task">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2m-11 0 1 15h12l1-15"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+<p class="try">Today · 8:00 to 13:00 slice</p>
+        <div class="mock planner">
+          <div class="planner-head">
+            <span class="day">Today</span>
+            <span class="count">4 to plan</span>
+          </div>
+          <div class="grid" style="height: 300px;">
+            <div class="gutter">
+              <span style="top: 0">8:00</span><span style="top: 60px">9:00</span><span style="top: 120px">10:00</span><span style="top: 180px">11:00</span><span style="top: 240px">12:00</span><span style="top: 300px">13:00</span>
+            </div>
+            <div class="col">
+              <div class="hline" style="top: 0"></div><div class="hline" style="top: 60px"></div><div class="hline" style="top: 120px"></div><div class="hline" style="top: 180px"></div><div class="hline" style="top: 240px"></div><div class="hline" style="top: 300px"></div>
+              <div class="mtg" style="top: 30px; height: 56px;">
+                <div class="t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4m8-4v4M3 11h18"/></svg><span>Leadership standup</span></div>
+                <div class="when">8:30–9:30</div>
+              </div>
+              <div class="slot" style="top: 96px; height: 70px;">
+                <div class="kind">Focus <span style="margin-left:auto; letter-spacing:0; text-transform:none;">0/2</span></div>
+                <div class="task"><i></i> Draft M&amp;A talent scan outline</div>
+                <div class="task"><i></i> Review OKR sheet</div>
+              </div>
+              <div class="mtg" style="top: 180px; height: 42px;">
+                <div class="t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4m8-4v4M3 11h18"/></svg><span>Lenka 1:1</span></div>
+                <div class="when">11:00–11:45</div>
+              </div>
+              <div class="ttask" style="top: 234px; height: 30px;">
+                <div class="task"><i></i> Send Q7 proposal to Lenka</div>
+              </div>
+            </div>
+          </div>
+          <div class="legend">
+            <span class="lg"><span class="sw m"></span><b>Meeting</b> from Google</span>
+            <span class="lg"><span class="sw s"></span><b>Focus slot</b> yours</span>
+            <span class="lg"><span class="sw t"></span><b>Timed task</b> yours</span>
+          </div>
+        </div>
+</div><div class="notes"><div class="note"><span>Tick the circle to complete or reopen the task. Writes through to Todoist, so ticked tasks stay ticked after the next sync.</span></div>
+<div class="note"><span>A "Top 3 today" toggle that works for any task, both directions. It updates the kara_top3 label in Todoist so the promotion survives every refresh.</span></div>
+<div class="note"><span>A "Goal of the week" toggle that creates a This-Week goal with the task as its first step, linked to the task's project when it has one.</span></div></div></div>
+</section>
+
+<section class="rel" id="v0.2.11">
+  <div class="sec-num"><b>V0.2.11</b> · 17 AUG 2026</div>
+  <h2>One-click app updates from the Profile screen</h2>
+  <p class="sec-sub">The Profile screen gained an "App update" card showing the current version with an "Update now" button. Pressing it fast-forwards the running checkout from GitHub and reloads the app in place. Web-layer changes apply immediately; only Rust-side changes still need an app restart.</p>
+  
+  
+  
+</section>
+
+<section class="rel" id="v0.2.10">
+  <div class="sec-num"><b>V0.2.10</b> · 17 AUG 2026</div>
+  <h2>Faster suggestion triage and a Waiting-For sync guard</h2>
+  
+  
+  
+  <div class="notes"><div class="note"><span>The Suggested buffer got a one-action reject with an undo toast, plus a dedicated Feedback lane, so clearing a batch of suggestions takes seconds.</span></div>
+<div class="note"><span>A sync guard stops the Waiting-For list from being overwritten by stale snapshots.</span></div>
+<div class="note"><span>Google Calendar on desktop moved to a proper PKCE loopback OAuth flow, with event fetch and the merged Today agenda.</span></div></div>
+</section>
+<footer>Agent Hub · built 2026-09-04 · <a href="../index.html">all agents</a></footer>
+</div>
+</body>
+</html>

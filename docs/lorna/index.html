@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lorna · User guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
+  --line:#D8DCD9; --accent:#2B4C8C; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
+  --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
+  --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
+  --line:#2C3441; --accent:#8CACE4; --accent-ink:#0F1420; --code-bg:#202734;
+  --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
+  --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
+  --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
+} }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+code, .mono { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  font-size:0.86em; background:var(--code-bg); padding:1px 5px; border-radius:3px; }
+.mono { background:none; padding:0; }
+.nav { position:sticky; top:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line); display:flex; gap:4px; flex-wrap:wrap;
+  align-items:center; padding:10px clamp(16px,6vw,64px); }
+.nav a { font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:0.04em;
+  color:var(--ink-soft); text-decoration:none; padding:4px 10px; border-radius:999px; }
+.nav a:hover, .nav a.on { color:var(--accent); background:var(--panel); }
+.wrap { max-width:760px; margin:0 auto; padding:0 clamp(16px,6vw,32px) 96px; }
+header.masthead { padding-top:52px; }
+.eyebrow { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); }
+h1 { font-family:"Archivo",sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px);
+  line-height:1.05; letter-spacing:-0.015em; margin:10px 0 14px; text-wrap:balance; }
+h2 { font-family:"Archivo",sans-serif; font-weight:650; font-size:24px;
+  letter-spacing:-0.01em; line-height:1.25; margin:44px 0 10px; }
+h3 { font-family:"Archivo",sans-serif; font-weight:600; font-size:18px; margin:28px 0 8px; }
+.lede { font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0; }
+.badge { display:inline-flex; align-items:center; gap:6px; padding:3px 10px;
+  border-radius:999px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  font-weight:600; letter-spacing:0.04em; background:var(--panel); color:var(--ink-soft);
+  border:1px solid var(--line); }
+.badge.acc { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.strip { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; margin-top:22px; }
+section.rel { margin-top:56px; padding-top:8px; }
+.sec-num { font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;
+  letter-spacing:0.06em; color:var(--ink-soft); }
+.sec-num b { color:var(--accent); font-weight:600; }
+section.rel h2 { margin:6px 0 8px; }
+.sec-sub { margin:0 0 18px; max-width:64ch; color:var(--ink-soft); font-size:15.5px; }
+ul, ol { padding-left:22px; margin:0 0 16px; }
+li { margin:6px 0; }
+li strong { color:var(--ink); }
+p { max-width:66ch; }
+blockquote { margin:16px 0; padding:10px 16px; border-left:3px solid var(--accent);
+  background:var(--panel); border-radius:0 8px 8px 0; color:var(--ink-soft); }
+.tablewrap { overflow-x:auto; margin:16px 0; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; }
+th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+  border-bottom:2px solid var(--line); padding:8px 12px 6px 0; }
+td { border-bottom:1px solid var(--line); padding:9px 12px 9px 0; vertical-align:top; }
+figure.shot { margin:22px 0; }
+figure.shot img { max-width:100%; border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); display:block; }
+figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-soft); margin-top:8px; }
+.duo { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:26px; align-items:start; }
+@media (max-width:780px) { .duo { grid-template-columns:1fr; } }
+.notes { display:flex; flex-direction:column; gap:12px; }
+.note { padding:13px 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:14px; font-size:14.5px; }
+.note b { display:block; margin-bottom:3px; }
+.note span { color:var(--ink-soft); }
+.try { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px; margin-top:36px; }
+.card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
+  box-shadow:var(--shadow); border-top:3px solid var(--card-accent, var(--accent));
+  transition:transform 0.12s ease; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { margin:0 0 6px; font-size:22px; }
+.card .tag { color:var(--ink-soft); font-size:14.5px; margin:0 0 14px; min-height:44px; }
+.card .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.card .links { margin-top:16px; display:flex; gap:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; }
+.card .links span { color:var(--card-accent, var(--accent)); }
+footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="../index.html">AGENT HUB</a><a href="index.html" class="on">GUIDE</a><a href="updates.html" class="">RELEASE NOTES</a></nav>
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Lorna · User guide</span>
+  <h1>Lorna</h1>
+  <p class="lede">The household and TGLA administration agent. Captures, files and tracks every administrative document for Thomas, Lynn and TGLA srl, so no due date is ever missed.</p>
+  <div class="strip"><span class="badge acc">shadow mode</span><span class="badge">latest: v0.2</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
+</header>
+<h1 id="what-lorna-is">What Lorna is</h1>
+<p>Two streams of paperwork land on this household: <strong>private</strong> (utilities, mutuelle, syndic, school, fines) and <strong>TGLA srl</strong> (supplier invoices, VAT, payroll, statutory documents). Lorna's job is that every one of those documents ends up findable in the right Dropbox folder, and every payable one gets paid once, on time, never twice.</p>
+<p>Lorna never handles money herself. TGLA bills are paid through Odoo and Revolut as before; private bills are paid by Thomas or Lynn in their own banking app. Lorna prepares, reminds and tracks.</p>
+<blockquote>Current status: Phase 0 to 1, shadow mode. Lorna reads, classifies and proposes. She does not yet move files, forward mail, or track payments live. Every step below marked <em>soon</em> or <em>phase 2/3</em> switches on at a later phase, each one gated by Thomas.</blockquote>
+<h1 id="handing-in-a-document">Handing in a document</h1>
+<p>Anything administrative, from either of you, goes through one of two doors. No pre-sorting needed: Lorna works out whether it is private or TGLA.</p>
+<h2 id="door-1-the-dropbox-inbox-live">Door 1: the Dropbox Inbox (live)</h2>
+<ol><li>Save or drop the file into <strong>Dropbox / 0 Inbox</strong>. Any device, any format.</li><li>Paper document? Photograph or scan it, then drop the image in. Lorna reads scans too.</li><li>Done. Do not file it yourself; that is the part Lorna does.</li></ol>
+<h2 id="door-2-the-admin-mailbox-soon">Door 2: the admin mailbox (soon)</h2>
+<p>A dedicated email address (being set up) where you forward any bill or letter that arrives by mail. Same result as the Inbox folder. Until it exists, use Door 1.</p>
+<p>TGLA e-invoices over Peppol go straight into Odoo on their own. You never need to hand those in.</p>
+<h1 id="what-happens-next">What happens next</h1>
+<p>Each document is read, classified on two axes (private or TGLA; payable or just filing) and then:</p>
+<ul><li>Filed into the agreed folder structure, immediately, with a searchable text layer <em>(phase 2)</em></li><li>TGLA payables forwarded to Odoo for the accountant; Lorna keeps the Dropbox copy <em>(phase 2)</em></li><li>Private payables put on the payment list with amount, due date and a scan-to-pay QR <em>(phase 3)</em></li><li>Unreadable or ambiguous documents parked in a quarantine queue and shown to Thomas, never guessed at <em>(live)</em></li></ul>
+<h2 id="the-monday-digest">The Monday digest</h2>
+<p>Once weekly, Lorna sends one message with everything that needs a human. It always arrives, even when it says "nothing due": a silent week means something is broken, and silence is the one failure this system refuses to allow.</p>
+<div class="tablewrap"><table><thead><tr><th>Digest line</th><th>Meaning</th><th>What you do</th></tr></thead><tbody><tr><td>Due</td><td>Payable within 7 days</td><td>Pay it (see below), tap mark paid</td></tr><tr><td>Overdue</td><td>Past due date, still open</td><td>Pay today; fines are pinned on top</td></tr><tr><td>Needs a look</td><td>Lorna is unsure what it is</td><td>Reply with what it is; Lorna learns from it</td></tr><tr><td>Quarantined</td><td>Unreadable scan or oddity</td><td>Re-scan, or key it in manually</td></tr><tr><td>Missing receipt</td><td>Card expense with no document</td><td>Forward the receipt through either door</td></tr></tbody></table></div>
+<h1 id="paying-a-private-bill-phase-3">Paying a private bill (phase 3)</h1>
+<p>Private payments stay in your hands, but with the typing removed:</p>
+<ol><li>Open the payment list on a laptop or tablet. Each open bill shows supplier, amount, due date and a QR code.</li><li>In KBC Mobile on your phone, choose scan and point it at the QR. Name, account, amount and the payment reference pre-fill.</li><li>Check the screen against the bill, sign, then tap mark paid on the list.</li></ol>
+<p>The QR is also a safety feature: the account number in it comes from Lorna's approved supplier registry, never from the document itself, so a tampered invoice cannot redirect a payment.</p>
+<p>TGLA bills never appear here. They are validated and paid in Odoo and Revolut, as before.</p>
+<h1 id="the-rules-that-never-relax">The rules that never relax</h1>
+<ul><li><strong>Never deletes.</strong> Lorna only moves files, logs every move, and any batch can be undone with one command.</li><li><strong>Never touches TGLA money.</strong> No bank access, no payment creation, ever. Reading is the ceiling.</li><li><strong>Never pays from a document.</strong> Payment details come only from the registry of suppliers Thomas has approved. A new or changed account number freezes the document and alerts Thomas.</li><li><strong>Never guesses an amount.</strong> Unreadable means quarantined, not estimated.</li><li><strong>Never goes quiet.</strong> The digest always sends, and an independent watchdog off the Mac mini alarms if Lorna stops running.</li></ul>
+<p>When Lorna files or labels something wrongly, say so (reply to the digest is enough). Every correction is recorded and consulted on all future decisions; a repeated correction becomes a rule.</p>
+<footer>Agent Hub · built 2026-09-04 · <a href="../index.html">all agents</a></footer>
+</div>
+</body>
+</html>

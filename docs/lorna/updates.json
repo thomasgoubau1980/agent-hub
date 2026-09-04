@@ -1,0 +1,16 @@
+[
+  {
+    "agent": "lorna",
+    "version": "0.2",
+    "date": "2026-09-04",
+    "title": "First end-to-end shadow test passed",
+    "url": "./lorna/updates.html#v0.2"
+  },
+  {
+    "agent": "lorna",
+    "version": "0.1",
+    "date": "2026-09-03",
+    "title": "Lorna exists",
+    "url": "./lorna/updates.html#v0.1"
+  }
+]

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Agent Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
+  --line:#D8DCD9; --accent:#2B4C8C; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
+  --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
+  --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
+  --line:#2C3441; --accent:#8CACE4; --accent-ink:#0F1420; --code-bg:#202734;
+  --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
+  --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
+  --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
+} }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+code, .mono { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  font-size:0.86em; background:var(--code-bg); padding:1px 5px; border-radius:3px; }
+.mono { background:none; padding:0; }
+.nav { position:sticky; top:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line); display:flex; gap:4px; flex-wrap:wrap;
+  align-items:center; padding:10px clamp(16px,6vw,64px); }
+.nav a { font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:0.04em;
+  color:var(--ink-soft); text-decoration:none; padding:4px 10px; border-radius:999px; }
+.nav a:hover, .nav a.on { color:var(--accent); background:var(--panel); }
+.wrap { max-width:760px; margin:0 auto; padding:0 clamp(16px,6vw,32px) 96px; }
+header.masthead { padding-top:52px; }
+.eyebrow { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); }
+h1 { font-family:"Archivo",sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px);
+  line-height:1.05; letter-spacing:-0.015em; margin:10px 0 14px; text-wrap:balance; }
+h2 { font-family:"Archivo",sans-serif; font-weight:650; font-size:24px;
+  letter-spacing:-0.01em; line-height:1.25; margin:44px 0 10px; }
+h3 { font-family:"Archivo",sans-serif; font-weight:600; font-size:18px; margin:28px 0 8px; }
+.lede { font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0; }
+.badge { display:inline-flex; align-items:center; gap:6px; padding:3px 10px;
+  border-radius:999px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  font-weight:600; letter-spacing:0.04em; background:var(--panel); color:var(--ink-soft);
+  border:1px solid var(--line); }
+.badge.acc { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.strip { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; margin-top:22px; }
+section.rel { margin-top:56px; padding-top:8px; }
+.sec-num { font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;
+  letter-spacing:0.06em; color:var(--ink-soft); }
+.sec-num b { color:var(--accent); font-weight:600; }
+section.rel h2 { margin:6px 0 8px; }
+.sec-sub { margin:0 0 18px; max-width:64ch; color:var(--ink-soft); font-size:15.5px; }
+ul, ol { padding-left:22px; margin:0 0 16px; }
+li { margin:6px 0; }
+li strong { color:var(--ink); }
+p { max-width:66ch; }
+blockquote { margin:16px 0; padding:10px 16px; border-left:3px solid var(--accent);
+  background:var(--panel); border-radius:0 8px 8px 0; color:var(--ink-soft); }
+.tablewrap { overflow-x:auto; margin:16px 0; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; }
+th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+  border-bottom:2px solid var(--line); padding:8px 12px 6px 0; }
+td { border-bottom:1px solid var(--line); padding:9px 12px 9px 0; vertical-align:top; }
+figure.shot { margin:22px 0; }
+figure.shot img { max-width:100%; border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); display:block; }
+figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-soft); margin-top:8px; }
+.duo { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:26px; align-items:start; }
+@media (max-width:780px) { .duo { grid-template-columns:1fr; } }
+.notes { display:flex; flex-direction:column; gap:12px; }
+.note { padding:13px 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:14px; font-size:14.5px; }
+.note b { display:block; margin-bottom:3px; }
+.note span { color:var(--ink-soft); }
+.try { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px; margin-top:36px; }
+.card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
+  box-shadow:var(--shadow); border-top:3px solid var(--card-accent, var(--accent));
+  transition:transform 0.12s ease; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { margin:0 0 6px; font-size:22px; }
+.card .tag { color:var(--ink-soft); font-size:14.5px; margin:0 0 14px; min-height:44px; }
+.card .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.card .links { margin-top:16px; display:flex; gap:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; }
+.card .links span { color:var(--card-accent, var(--accent)); }
+footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="index.html" class="on">AGENT HUB</a></nav>
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Thomas Goubau · Agent fleet</span>
+  <h1>Agent Hub</h1>
+  <p class="lede">User guides and release notes for every agent in the fleet, in one place. Pick an agent to see what it does and what shipped.</p>
+</header>
+<div class="cards">
+<a class="card" href="kara/index.html" style="--card-accent:#01977C">
+  <h2>Kara</h2>
+  <p class="tag">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork.</p>
+  <div class="meta">
+    <span class="badge acc" style="background:var(--card-accent);border-color:var(--card-accent)">live</span>
+    <span class="badge">iPhone &amp; iPad build 19 · 26 August 2026</span>
+  </div>
+  <div class="links"><span>user guide →</span><span>release notes →</span></div>
+</a>
+
+<a class="card" href="lorna/index.html" style="--card-accent:#2B4C8C">
+  <h2>Lorna</h2>
+  <p class="tag">The household and TGLA administration agent. Captures, files and tracks every administrative document for Thomas, Lynn and TGLA srl, so no due date is ever missed.</p>
+  <div class="meta">
+    <span class="badge acc" style="background:var(--card-accent);border-color:var(--card-accent)">shadow mode</span>
+    <span class="badge">v0.2 · 4 September 2026</span>
+  </div>
+  <div class="links"><span>user guide →</span><span>release notes →</span></div>
+</a></div>
+<footer>Agent Hub · built 2026-09-04 · <a href="./index.html">all agents</a></footer>
+</div>
+</body>
+</html>

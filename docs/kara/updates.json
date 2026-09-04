@@ -1,0 +1,72 @@
+[
+  {
+    "agent": "kara",
+    "version": "iPhone & iPad build 19",
+    "date": "2026-08-26",
+    "title": "Release notes live inside the iOS app too",
+    "url": "./kara/updates.html#iphone-ipad-build-19"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.17",
+    "date": "2026-08-26",
+    "title": "Release notes live inside the app",
+    "url": "./kara/updates.html#v0.2.17"
+  },
+  {
+    "agent": "kara",
+    "version": "iPad builds 17-18",
+    "date": "2026-08-25",
+    "title": "The iPad becomes an all-day hub",
+    "url": "./kara/updates.html#ipad-builds-17-18"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.16",
+    "date": "2026-08-25",
+    "title": "Every \"+N more\" now expands",
+    "url": "./kara/updates.html#v0.2.16"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.15",
+    "date": "2026-08-25",
+    "title": "Dropping a task on a timebox now actually nests it",
+    "url": "./kara/updates.html#v0.2.15"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.14",
+    "date": "2026-08-25",
+    "title": "Your meetings become the day's diary",
+    "url": "./kara/updates.html#v0.2.14"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.13",
+    "date": "2026-08-25",
+    "title": "Planner fixes: slot tasks stay put, overlaps untangle, tasks open from anywhere",
+    "url": "./kara/updates.html#v0.2.13"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.12",
+    "date": "2026-08-25",
+    "title": "One task window everywhere, and meetings on the Plan-the-day timeline",
+    "url": "./kara/updates.html#v0.2.12"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.11",
+    "date": "2026-08-17",
+    "title": "One-click app updates from the Profile screen",
+    "url": "./kara/updates.html#v0.2.11"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.10",
+    "date": "2026-08-17",
+    "title": "Faster suggestion triage and a Waiting-For sync guard",
+    "url": "./kara/updates.html#v0.2.10"
+  }
+]
