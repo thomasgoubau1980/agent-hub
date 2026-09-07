@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "iPhone & iPad build 20",
+    "date": "2026-09-07",
+    "title": "Reject in one tap, undo if you change your mind",
+    "url": "./kara/updates.html#iphone-ipad-build-20"
+  },
+  {
+    "agent": "kara",
     "version": "iPhone & iPad build 19",
     "date": "2026-08-26",
     "title": "Release notes live inside the iOS app too",
