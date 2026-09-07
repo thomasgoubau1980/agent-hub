@@ -653,6 +653,15 @@
       ]
     },
     {
+      "name": "skill-promoter",
+      "purpose": "The weekly sweep that finds skills created locally on any agent surface and promotes new ones into the shared GitHub catalog, so every skill reaches all agents and this reference page.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "grok"
+      ]
+    },
+    {
       "name": "skills-status",
       "purpose": "Shows every catalog skill with a check of whether it is installed in the agent you are talking to.",
       "curated": true,

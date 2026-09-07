@@ -55,6 +55,7 @@
   "session-operating-map": "A per-project map of parallel agent sessions so lanes of work stay named and never collide.",
   "session-to-skill-extractor": "Reviews a finished work session for reusable patterns and drafts them as new or updated skills.",
   "site-publisher": "Publishes a finished page to the personal or company website as a real, share-ready URL.",
+  "skill-promoter": "The weekly sweep that finds skills created locally on any agent surface and promotes new ones into the shared GitHub catalog, so every skill reaches all agents and this reference page.",
   "skills-status": "Shows every catalog skill with a check of whether it is installed in the agent you are talking to.",
   "sqlite-case-store": "A local SQLite database for source documents, chunks, normalized records and validation results.",
   "stakeholder-update-email": "After work ships, sends or drafts a short, truthful update email to the person who needs to know.",
