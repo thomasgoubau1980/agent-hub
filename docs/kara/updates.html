@@ -87,6 +87,18 @@ figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
   letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
 .mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
   box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.filter { margin-top:30px; }
+.filter input { width:100%; max-width:420px; padding:10px 14px; font:inherit; font-size:15px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.filter input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+table.skills td:first-child { white-space:nowrap; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; padding-right:18px; }
+table.skills td:first-child a { text-decoration:none; }
+table.skills .surf { display:inline-block; margin:1px 3px 1px 0; padding:1px 7px;
+  border-radius:999px; background:var(--panel); border:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-soft); }
+table.skills .surf.all { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.count { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
 .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:18px; margin-top:36px; }
 .card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
@@ -478,7 +490,7 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <div class="note"><span>A sync guard stops the Waiting-For list from being overwritten by stale snapshots.</span></div>
 <div class="note"><span>Google Calendar on desktop moved to a proper PKCE loopback OAuth flow, with event fetch and the merged Today agenda.</span></div></div>
 </section>
-<footer>Agent Hub · built 2026-09-04 · <a href="../index.html">all agents</a></footer>
+<footer>Agent Hub · built 2026-09-07 · <a href="../index.html">all agents</a></footer>
 </div>
 </body>
 </html>

@@ -22,6 +22,11 @@ if [ -d "$KARA_SRC" ]; then
   rsync -a --exclude "README.md" "$KARA_SRC/" "agents/kara/updates/"
 fi
 
+# Refresh the skills reference from the catalog repo when it is checked out.
+if [ -d "$HOME/Developer/personal-agent-skills/skills" ]; then
+  node scripts/sync-skills.mjs
+fi
+
 node scripts/build.mjs
 
 git add -A

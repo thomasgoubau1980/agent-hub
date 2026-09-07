@@ -247,6 +247,18 @@ figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
   letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
 .mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
   box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.filter { margin-top:30px; }
+.filter input { width:100%; max-width:420px; padding:10px 14px; font:inherit; font-size:15px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.filter input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+table.skills td:first-child { white-space:nowrap; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; padding-right:18px; }
+table.skills td:first-child a { text-decoration:none; }
+table.skills .surf { display:inline-block; margin:1px 3px 1px 0; padding:1px 7px;
+  border-radius:999px; background:var(--panel); border:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-soft); }
+table.skills .surf.all { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.count { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
 .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:18px; margin-top:36px; }
 .card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
@@ -405,9 +417,59 @@ ${items || "<p class='sec-sub'>No releases yet.</p>"}`;
   }
 }
 
+/* ----------------------------- skills reference --------------------------- */
+
+function buildSkillsPage(data) {
+  const total = Object.keys(data.surfaceLabels).length;
+  const short = { "claude-code": "claude", hermes: "hermes", codex: "codex",
+    openclaw: "openclaw", openglow: "openglow", brian: "brian", oracle: "oracle" };
+  const rows = data.skills
+    .map((s) => {
+      const badges =
+        s.surfaces.length === total
+          ? `<span class="surf all">all agents</span>`
+          : s.surfaces.map((x) => `<span class="surf">${escapeHtml(short[x] ?? x)}</span>`).join("") ||
+            `<span class="surf">catalog only</span>`;
+      return `<tr data-k="${escapeHtml(`${s.name} ${s.purpose}`.toLowerCase())}">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/${s.name}">${escapeHtml(s.name)}</a></td>
+<td>${escapeHtml(s.purpose)}</td>
+<td>${badges}</td></tr>`;
+    })
+    .join("\n");
+  const body = `
+<header class="masthead">
+  <span class="eyebrow">Fleet · Skills reference</span>
+  <h1>Every skill, in plain English</h1>
+  <p class="lede">All ${data.skills.length} skills in the <a href="https://github.com/thomasgoubau1980/personal-agent-skills">personal-agent-skills</a> catalog: what each one is for and which agents carry it. Regenerated on every hub publish, so this never goes stale.</p>
+  <div class="filter"><input id="q" type="search" placeholder="Filter by name or purpose..." aria-label="Filter skills"> <span class="count" id="n">${data.skills.length} skills</span></div>
+</header>
+<div class="tablewrap"><table class="skills">
+<thead><tr><th>Skill</th><th>What it is for</th><th>Deployed to</th></tr></thead>
+<tbody id="rows">
+${rows}
+</tbody></table></div>
+<script>
+const q=document.getElementById("q"),n=document.getElementById("n"),rs=[...document.querySelectorAll("#rows tr")];
+q.addEventListener("input",()=>{const v=q.value.toLowerCase().trim();let c=0;
+for(const r of rs){const hit=!v||r.dataset.k.includes(v);r.style.display=hit?"":"none";if(hit)c++;}
+n.textContent=c+" skill"+(c===1?"":"s");});
+</script>`;
+  writeFileSync(
+    join(OUT, "skills.html"),
+    page({
+      title: "Skills reference",
+      accent: "#2B4C8C",
+      accentDark: "#8CACE4",
+      nav: `<a href="index.html">AGENT HUB</a><a href="skills.html" class="on">SKILLS</a>`,
+      body,
+      root: ".",
+    })
+  );
+}
+
 /* ------------------------------- hub index -------------------------------- */
 
-function buildIndex(agents) {
+function buildIndex(agents, skillCount) {
   const cards = agents
     .map((a) => {
       const latest = a.entries[0];
@@ -429,10 +491,17 @@ function buildIndex(agents) {
   <h1>Agent Hub</h1>
   <p class="lede">User guides and release notes for every agent in the fleet, in one place. Pick an agent to see what it does and what shipped.</p>
 </header>
-<div class="cards">${cards}</div>`;
+<div class="cards">${cards}</div>
+${skillCount ? `<h2>Reference</h2>
+<a class="card" href="skills.html" style="--card-accent:#2B4C8C">
+  <h2>Skills reference</h2>
+  <p class="tag">Every skill in the fleet catalog, what it is for in plain English, and which agents carry it.</p>
+  <div class="meta"><span class="badge">${skillCount} skills</span></div>
+  <div class="links"><span>browse the table →</span></div>
+</a>` : ""}`;
   writeFileSync(
     join(OUT, "index.html"),
-    page({ title: "Agent Hub", accent: "#2B4C8C", accentDark: "#8CACE4", nav: `<a href="index.html" class="on">AGENT HUB</a>`, body, root: "." })
+    page({ title: "Agent Hub", accent: "#2B4C8C", accentDark: "#8CACE4", nav: `<a href="index.html" class="on">AGENT HUB</a>${skillCount ? `<a href="skills.html">SKILLS</a>` : ""}`, body, root: "." })
   );
 }
 
@@ -449,5 +518,13 @@ const agents = readdirSync(AGENTS_DIR)
 
 if (!agents.length) throw new Error("No agents in agents/");
 for (const a of agents) buildAgentPages(a, agents);
-buildIndex(agents);
-console.log(`Built ${agents.length} agents → docs/ (${agents.map((a) => a.slug).join(", ")})`);
+
+const skillsJson = join(ROOT, "fleet", "skills.json");
+let skillCount = 0;
+if (existsSync(skillsJson)) {
+  const data = JSON.parse(readFileSync(skillsJson, "utf8"));
+  buildSkillsPage(data);
+  skillCount = data.skills.length;
+}
+buildIndex(agents, skillCount);
+console.log(`Built ${agents.length} agents + ${skillCount} skills → docs/ (${agents.map((a) => a.slug).join(", ")})`);

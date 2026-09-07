@@ -87,6 +87,18 @@ figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
   letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
 .mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
   box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.filter { margin-top:30px; }
+.filter input { width:100%; max-width:420px; padding:10px 14px; font:inherit; font-size:15px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.filter input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+table.skills td:first-child { white-space:nowrap; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; padding-right:18px; }
+table.skills td:first-child a { text-decoration:none; }
+table.skills .surf { display:inline-block; margin:1px 3px 1px 0; padding:1px 7px;
+  border-radius:999px; background:var(--panel); border:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-soft); }
+table.skills .surf.all { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.count { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
 .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:18px; margin-top:36px; }
 .card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
@@ -105,7 +117,7 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 </style>
 </head>
 <body>
-<nav class="nav"><a href="index.html" class="on">AGENT HUB</a></nav>
+<nav class="nav"><a href="index.html" class="on">AGENT HUB</a><a href="skills.html">SKILLS</a></nav>
 <div class="wrap">
 
 <header class="masthead">
@@ -133,7 +145,14 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
   </div>
   <div class="links"><span>user guide →</span><span>release notes →</span></div>
 </a></div>
-<footer>Agent Hub · built 2026-09-04 · <a href="./index.html">all agents</a></footer>
+<h2>Reference</h2>
+<a class="card" href="skills.html" style="--card-accent:#2B4C8C">
+  <h2>Skills reference</h2>
+  <p class="tag">Every skill in the fleet catalog, what it is for in plain English, and which agents carry it.</p>
+  <div class="meta"><span class="badge">62 skills</span></div>
+  <div class="links"><span>browse the table →</span></div>
+</a>
+<footer>Agent Hub · built 2026-09-07 · <a href="./index.html">all agents</a></footer>
 </div>
 </body>
 </html>

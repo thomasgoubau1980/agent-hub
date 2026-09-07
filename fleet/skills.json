@@ -1,0 +1,678 @@
+{
+  "generated": "2026-09-07",
+  "catalog": "github.com/thomasgoubau1980/personal-agent-skills",
+  "surfaceLabels": {
+    "claude-code": "Claude Code",
+    "hermes": "Hermes",
+    "codex": "Codex",
+    "openclaw": "OpenClaw",
+    "openglow": "OpenGlow",
+    "brian": "Brian",
+    "oracle": "Oracle"
+  },
+  "skills": [
+    {
+      "name": "agent-docs-hub",
+      "purpose": "Publishes and updates every agent's user guide and release notes on this hub, screenshots included.",
+      "curated": true,
+      "surfaces": [
+        "brian",
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "agentic-harness-designer",
+      "purpose": "Designs and reviews AI agent systems as a whole: the tools, permissions, safety rails and workflows around the model, not just the model choice.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "assumption-checker",
+      "purpose": "Reads a plan or strategy document and lists the hidden assumptions, missing evidence and contradictions before you act on it.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "audience-content-system",
+      "purpose": "Writes content calibrated to one specific publication and audience level, for example a beginner-focused newsletter.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "automation-discovery",
+      "purpose": "Digs through real work history (AI sessions, Slack, tickets) to find and prove which recurring jobs are worth automating, then builds the chosen one.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "brain-dump-processor",
+      "purpose": "Turns a messy voice memo or rambling note into cleanly separated ideas, evaluates which are worth pursuing, and files them.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "branded-image-prompting",
+      "purpose": "A prompting guide that keeps every generated image on brand: colors, typography, composition and recurring formats.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "broll-pipeline",
+      "purpose": "Turns a finished talking-head video into one with animated motion graphics inserted at exactly the right moments.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "browser-qa",
+      "purpose": "Tests web pages like a professional: performance, errors, responsive and accessibility checks, click-through flows, with screenshots as evidence.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "buzz-comms",
+      "purpose": "Posts to and reads from Buzz, the private team chat where humans and agents coordinate.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "oracle"
+      ]
+    },
+    {
+      "name": "case-data-normalization",
+      "purpose": "Turns messy case facts into one clean ledger of dates, parties, amounts, categories and review status.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "chief-of-staff",
+      "purpose": "Runs the daily operating rhythm: morning briefing, coordination across tasks and follow-ups, end-of-day review.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "hermes",
+        "oracle"
+      ]
+    },
+    {
+      "name": "citation-guard",
+      "purpose": "Checks that every claim in a draft actually matches the evidence it cites: the source must exist and say what is claimed.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "clean-my-ai-harness",
+      "purpose": "Maps everything the agent is configured with and proposes a safe cleanup of stale instructions, memories and skills.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "content-radar",
+      "purpose": "Watches followed influencers daily and delivers a rated morning digest to Telegram, with one-tap booking of reading slots.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "openclaw",
+        "oracle"
+      ]
+    },
+    {
+      "name": "cron-audit",
+      "purpose": "The weekly report of every scheduled job: what runs, what has gone silent, what is switched off.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "openclaw",
+        "oracle"
+      ]
+    },
+    {
+      "name": "current-info-search",
+      "purpose": "Sends web research through a search API built for fresh information instead of the harness's built-in search.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "deep-research",
+      "purpose": "Deep, multi-source, fact-checked research: the question is broken down, primary sources read, and every claim adversarially verified.",
+      "curated": true,
+      "surfaces": [
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "deterministic-retrieval-map",
+      "purpose": "Lookup tables that say exactly which document sections matter for each case type, so retrieval stops guessing.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "document-chunking-tagging",
+      "purpose": "Splits ingested documents into addressable, tagged sections so agents can cite the exact place a fact came from.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "end-feature",
+      "purpose": "The ship-time closeout of a feature: tests verified on the real build, screenshots taken, docs published to the hub, announcement material generated, Ship Card written.",
+      "curated": true,
+      "surfaces": [
+        "brian",
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "essay-illustration-gallery",
+      "purpose": "Illustrates a finished essay end to end: picks the image-worthy moments, generates consistent images, and builds the gallery page.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "feature-blueprint",
+      "purpose": "The pre-development gate: press release, user tests, release-note draft, guide updates and marketing pack, all before one line of code.",
+      "curated": true,
+      "surfaces": [
+        "brian",
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "frontend-taste",
+      "purpose": "Stronger design instincts for anything web-built: varied layouts, real typography, restrained color, and screenshot-verified results.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "goal-prompt-generator",
+      "purpose": "Turns a fuzzy plan into a bounded objective for an agent, with a definition of done, hard limits and stop conditions.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "heavy-file-ingestion",
+      "purpose": "Converts big, agent-hostile files (large PDFs, decks, spreadsheets) into light readable artifacts before any analysis begins.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "html-artifacts",
+      "purpose": "Turns dense output (plans, research, reviews, comparisons) into one polished, self-contained HTML page.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "human-gate",
+      "purpose": "The stop line for high-stakes work: agents prepare, draft and validate; a human reviews, signs, sends, files or pays.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "image-gateway",
+      "purpose": "Generates or edits images through one API with a single command and no per-call setup.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "image-model-arena",
+      "purpose": "Builds side-by-side comparison pages for image-generation models running the same prompts.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "kara-release-notes",
+      "purpose": "Kara's ship ritual: write the notes entry, release to the self-update feed, publish the updates pages.",
+      "curated": true,
+      "surfaces": [
+        "claude-code"
+      ]
+    },
+    {
+      "name": "link-digest",
+      "purpose": "Summarizes and rates any link Thomas shares in Telegram, and books an evening reading slot when it is worth the time.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "openclaw",
+        "oracle"
+      ]
+    },
+    {
+      "name": "media-transcription",
+      "purpose": "Transcribes audio and video files into clean transcripts with timestamps, chapters and speaker labels.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "meeting-synthesis",
+      "purpose": "Turns a meeting recording or transcript into takeaways, decisions with owners, action items and open questions.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "meetingbrief",
+      "purpose": "Prepares a meeting: pulls the calendar event, researches the external attendees, and delivers the brief to Telegram.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "openclaw",
+        "oracle"
+      ]
+    },
+    {
+      "name": "my-voice",
+      "purpose": "Encodes how Thomas actually writes, per context, so drafts sound like him instead of like an AI.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "nle-assistant",
+      "purpose": "Drives the video editor (DaVinci Resolve) directly: silence removal, subclips and timelines built inside the real project.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "open-agent-engine",
+      "purpose": "The runner playbook for the Linear task queue: claim exactly one task, do the scoped work, leave receipts.",
+      "curated": true,
+      "surfaces": [
+        "codex"
+      ]
+    },
+    {
+      "name": "open-brain-case-store",
+      "purpose": "Keeps the normalized case-file records inside Open Brain instead of a local database.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "openbrain",
+      "purpose": "Search, capture and log to Open Brain, the durable knowledge base of decisions, meetings, people and context.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "packet-export",
+      "purpose": "Packages reviewed outputs into an editable folder and PDF: draft, citation map, checklist and source manifest.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "page-testing-memory",
+      "purpose": "Keeps page-specific testing facts (selectors, test accounts, cleanup quirks) in repo-local runbooks where they belong.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "para-ai-filing-context",
+      "purpose": "Teaches agents the PARA filing logic before they save, export or publish any deliverable, so nothing gets misfiled.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "para-filing-auditor",
+      "purpose": "Audits and reorganizes the PARA filing systems on Dropbox and Google Drive, always plan-first with explicit approval.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "para-organizer",
+      "purpose": "Sets up or cleans a PARA folder structure (Projects, Areas, Resources, Archives) on the local file system.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "oracle"
+      ]
+    },
+    {
+      "name": "pdf-document-ingestion",
+      "purpose": "Converts PDFs, scans and forms into markdown or tables with stable references back to the exact source spot.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "project-intake-router",
+      "purpose": "Sets up a new project properly before work starts: PARA home, folder structure, brief, milestones, skills and human gates.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "radio-edit",
+      "purpose": "Locks the spoken narrative of a video first, as a transcript-driven rough cut, before any visuals are touched.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "reading-pack-builder",
+      "purpose": "Builds a controlled local reading page from a pile of documents so review happens in one place.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "release-briefing",
+      "purpose": "Turns gathered data about a significant release in the field into a clear, decision-ready briefing.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "ringer",
+      "purpose": "The verified-swarm playbook: batches of work routed to cheap workers, with executable checks deciding pass or fail.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "self-pr-merge",
+      "purpose": "Reviews and merges Thomas's own pull requests with real discipline despite GitHub's self-approval limits.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "session-operating-map",
+      "purpose": "A per-project map of parallel agent sessions so lanes of work stay named and never collide.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "session-to-skill-extractor",
+      "purpose": "Reviews a finished work session for reusable patterns and drafts them as new or updated skills.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "site-publisher",
+      "purpose": "Publishes a finished page to the personal or company website as a real, share-ready URL.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "skills-status",
+      "purpose": "Shows every catalog skill with a check of whether it is installed in the agent you are talking to.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "sqlite-case-store",
+      "purpose": "A local SQLite database for source documents, chunks, normalized records and validation results.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "stakeholder-update-email",
+      "purpose": "After work ships, sends or drafts a short, truthful update email to the person who needs to know.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "start-here",
+      "purpose": "The front-door reflex for every task: recap open loops, run the routing test out loud, pick the lightest tool that still leaves an inspectable result.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "openglow",
+        "oracle"
+      ]
+    },
+    {
+      "name": "testing-runbook-creator",
+      "purpose": "Ensures testing discoveries get written into runbooks instead of dying in the chat where they were found.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "visible-delegation",
+      "purpose": "Lets one agent drive another in a shared terminal session so delegated work stays visible.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    },
+    {
+      "name": "weekly-signal-diff",
+      "purpose": "Reviews a defined set of inputs on a cadence and reports only what changed since last time.",
+      "curated": true,
+      "surfaces": [
+        "claude-code",
+        "codex",
+        "oracle"
+      ]
+    }
+  ]
+}

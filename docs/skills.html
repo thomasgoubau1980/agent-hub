@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Skills reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
+  --line:#D8DCD9; --accent:#2B4C8C; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
+  --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
+  --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
+  --line:#2C3441; --accent:#8CACE4; --accent-ink:#0F1420; --code-bg:#202734;
+  --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
+  --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
+  --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
+} }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+code, .mono { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  font-size:0.86em; background:var(--code-bg); padding:1px 5px; border-radius:3px; }
+.mono { background:none; padding:0; }
+.nav { position:sticky; top:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line); display:flex; gap:4px; flex-wrap:wrap;
+  align-items:center; padding:10px clamp(16px,6vw,64px); }
+.nav a { font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:0.04em;
+  color:var(--ink-soft); text-decoration:none; padding:4px 10px; border-radius:999px; }
+.nav a:hover, .nav a.on { color:var(--accent); background:var(--panel); }
+.wrap { max-width:760px; margin:0 auto; padding:0 clamp(16px,6vw,32px) 96px; }
+header.masthead { padding-top:52px; }
+.eyebrow { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); }
+h1 { font-family:"Archivo",sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px);
+  line-height:1.05; letter-spacing:-0.015em; margin:10px 0 14px; text-wrap:balance; }
+h2 { font-family:"Archivo",sans-serif; font-weight:650; font-size:24px;
+  letter-spacing:-0.01em; line-height:1.25; margin:44px 0 10px; }
+h3 { font-family:"Archivo",sans-serif; font-weight:600; font-size:18px; margin:28px 0 8px; }
+.lede { font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0; }
+.badge { display:inline-flex; align-items:center; gap:6px; padding:3px 10px;
+  border-radius:999px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  font-weight:600; letter-spacing:0.04em; background:var(--panel); color:var(--ink-soft);
+  border:1px solid var(--line); }
+.badge.acc { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.strip { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; margin-top:22px; }
+section.rel { margin-top:56px; padding-top:8px; }
+.sec-num { font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;
+  letter-spacing:0.06em; color:var(--ink-soft); }
+.sec-num b { color:var(--accent); font-weight:600; }
+section.rel h2 { margin:6px 0 8px; }
+.sec-sub { margin:0 0 18px; max-width:64ch; color:var(--ink-soft); font-size:15.5px; }
+ul, ol { padding-left:22px; margin:0 0 16px; }
+li { margin:6px 0; }
+li strong { color:var(--ink); }
+p { max-width:66ch; }
+blockquote { margin:16px 0; padding:10px 16px; border-left:3px solid var(--accent);
+  background:var(--panel); border-radius:0 8px 8px 0; color:var(--ink-soft); }
+.tablewrap { overflow-x:auto; margin:16px 0; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; }
+th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+  border-bottom:2px solid var(--line); padding:8px 12px 6px 0; }
+td { border-bottom:1px solid var(--line); padding:9px 12px 9px 0; vertical-align:top; }
+figure.shot { margin:22px 0; }
+figure.shot img { max-width:100%; border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); display:block; }
+figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-soft); margin-top:8px; }
+.duo { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:26px; align-items:start; }
+@media (max-width:780px) { .duo { grid-template-columns:1fr; } }
+.notes { display:flex; flex-direction:column; gap:12px; }
+.note { padding:13px 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:14px; font-size:14.5px; }
+.note b { display:block; margin-bottom:3px; }
+.note span { color:var(--ink-soft); }
+.try { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.filter { margin-top:30px; }
+.filter input { width:100%; max-width:420px; padding:10px 14px; font:inherit; font-size:15px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.filter input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+table.skills td:first-child { white-space:nowrap; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; padding-right:18px; }
+table.skills td:first-child a { text-decoration:none; }
+table.skills .surf { display:inline-block; margin:1px 3px 1px 0; padding:1px 7px;
+  border-radius:999px; background:var(--panel); border:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-soft); }
+table.skills .surf.all { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.count { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px; margin-top:36px; }
+.card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
+  box-shadow:var(--shadow); border-top:3px solid var(--card-accent, var(--accent));
+  transition:transform 0.12s ease; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { margin:0 0 6px; font-size:22px; }
+.card .tag { color:var(--ink-soft); font-size:14.5px; margin:0 0 14px; min-height:44px; }
+.card .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.card .links { margin-top:16px; display:flex; gap:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; }
+.card .links span { color:var(--card-accent, var(--accent)); }
+footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="index.html">AGENT HUB</a><a href="skills.html" class="on">SKILLS</a></nav>
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Fleet · Skills reference</span>
+  <h1>Every skill, in plain English</h1>
+  <p class="lede">All 62 skills in the <a href="https://github.com/thomasgoubau1980/personal-agent-skills">personal-agent-skills</a> catalog: what each one is for and which agents carry it. Regenerated on every hub publish, so this never goes stale.</p>
+  <div class="filter"><input id="q" type="search" placeholder="Filter by name or purpose..." aria-label="Filter skills"> <span class="count" id="n">62 skills</span></div>
+</header>
+<div class="tablewrap"><table class="skills">
+<thead><tr><th>Skill</th><th>What it is for</th><th>Deployed to</th></tr></thead>
+<tbody id="rows">
+<tr data-k="agent-docs-hub publishes and updates every agent's user guide and release notes on this hub, screenshots included.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/agent-docs-hub">agent-docs-hub</a></td>
+<td>Publishes and updates every agent's user guide and release notes on this hub, screenshots included.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="agentic-harness-designer designs and reviews ai agent systems as a whole: the tools, permissions, safety rails and workflows around the model, not just the model choice.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/agentic-harness-designer">agentic-harness-designer</a></td>
+<td>Designs and reviews AI agent systems as a whole: the tools, permissions, safety rails and workflows around the model, not just the model choice.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="assumption-checker reads a plan or strategy document and lists the hidden assumptions, missing evidence and contradictions before you act on it.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/assumption-checker">assumption-checker</a></td>
+<td>Reads a plan or strategy document and lists the hidden assumptions, missing evidence and contradictions before you act on it.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="audience-content-system writes content calibrated to one specific publication and audience level, for example a beginner-focused newsletter.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/audience-content-system">audience-content-system</a></td>
+<td>Writes content calibrated to one specific publication and audience level, for example a beginner-focused newsletter.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="automation-discovery digs through real work history (ai sessions, slack, tickets) to find and prove which recurring jobs are worth automating, then builds the chosen one.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/automation-discovery">automation-discovery</a></td>
+<td>Digs through real work history (AI sessions, Slack, tickets) to find and prove which recurring jobs are worth automating, then builds the chosen one.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="brain-dump-processor turns a messy voice memo or rambling note into cleanly separated ideas, evaluates which are worth pursuing, and files them.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/brain-dump-processor">brain-dump-processor</a></td>
+<td>Turns a messy voice memo or rambling note into cleanly separated ideas, evaluates which are worth pursuing, and files them.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="branded-image-prompting a prompting guide that keeps every generated image on brand: colors, typography, composition and recurring formats.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/branded-image-prompting">branded-image-prompting</a></td>
+<td>A prompting guide that keeps every generated image on brand: colors, typography, composition and recurring formats.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="broll-pipeline turns a finished talking-head video into one with animated motion graphics inserted at exactly the right moments.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/broll-pipeline">broll-pipeline</a></td>
+<td>Turns a finished talking-head video into one with animated motion graphics inserted at exactly the right moments.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="browser-qa tests web pages like a professional: performance, errors, responsive and accessibility checks, click-through flows, with screenshots as evidence.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/browser-qa">browser-qa</a></td>
+<td>Tests web pages like a professional: performance, errors, responsive and accessibility checks, click-through flows, with screenshots as evidence.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="buzz-comms posts to and reads from buzz, the private team chat where humans and agents coordinate.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/buzz-comms">buzz-comms</a></td>
+<td>Posts to and reads from Buzz, the private team chat where humans and agents coordinate.</td>
+<td><span class="surf">claude</span><span class="surf">oracle</span></td></tr>
+<tr data-k="case-data-normalization turns messy case facts into one clean ledger of dates, parties, amounts, categories and review status.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/case-data-normalization">case-data-normalization</a></td>
+<td>Turns messy case facts into one clean ledger of dates, parties, amounts, categories and review status.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="chief-of-staff runs the daily operating rhythm: morning briefing, coordination across tasks and follow-ups, end-of-day review.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/chief-of-staff">chief-of-staff</a></td>
+<td>Runs the daily operating rhythm: morning briefing, coordination across tasks and follow-ups, end-of-day review.</td>
+<td><span class="surf">claude</span><span class="surf">hermes</span><span class="surf">oracle</span></td></tr>
+<tr data-k="citation-guard checks that every claim in a draft actually matches the evidence it cites: the source must exist and say what is claimed.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/citation-guard">citation-guard</a></td>
+<td>Checks that every claim in a draft actually matches the evidence it cites: the source must exist and say what is claimed.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="clean-my-ai-harness maps everything the agent is configured with and proposes a safe cleanup of stale instructions, memories and skills.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/clean-my-ai-harness">clean-my-ai-harness</a></td>
+<td>Maps everything the agent is configured with and proposes a safe cleanup of stale instructions, memories and skills.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="content-radar watches followed influencers daily and delivers a rated morning digest to telegram, with one-tap booking of reading slots.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/content-radar">content-radar</a></td>
+<td>Watches followed influencers daily and delivers a rated morning digest to Telegram, with one-tap booking of reading slots.</td>
+<td><span class="surf">claude</span><span class="surf">openclaw</span><span class="surf">oracle</span></td></tr>
+<tr data-k="cron-audit the weekly report of every scheduled job: what runs, what has gone silent, what is switched off.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/cron-audit">cron-audit</a></td>
+<td>The weekly report of every scheduled job: what runs, what has gone silent, what is switched off.</td>
+<td><span class="surf">claude</span><span class="surf">openclaw</span><span class="surf">oracle</span></td></tr>
+<tr data-k="current-info-search sends web research through a search api built for fresh information instead of the harness's built-in search.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/current-info-search">current-info-search</a></td>
+<td>Sends web research through a search API built for fresh information instead of the harness's built-in search.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="deep-research deep, multi-source, fact-checked research: the question is broken down, primary sources read, and every claim adversarially verified.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/deep-research">deep-research</a></td>
+<td>Deep, multi-source, fact-checked research: the question is broken down, primary sources read, and every claim adversarially verified.</td>
+<td><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="deterministic-retrieval-map lookup tables that say exactly which document sections matter for each case type, so retrieval stops guessing.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/deterministic-retrieval-map">deterministic-retrieval-map</a></td>
+<td>Lookup tables that say exactly which document sections matter for each case type, so retrieval stops guessing.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="document-chunking-tagging splits ingested documents into addressable, tagged sections so agents can cite the exact place a fact came from.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/document-chunking-tagging">document-chunking-tagging</a></td>
+<td>Splits ingested documents into addressable, tagged sections so agents can cite the exact place a fact came from.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="end-feature the ship-time closeout of a feature: tests verified on the real build, screenshots taken, docs published to the hub, announcement material generated, ship card written.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/end-feature">end-feature</a></td>
+<td>The ship-time closeout of a feature: tests verified on the real build, screenshots taken, docs published to the hub, announcement material generated, Ship Card written.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="essay-illustration-gallery illustrates a finished essay end to end: picks the image-worthy moments, generates consistent images, and builds the gallery page.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/essay-illustration-gallery">essay-illustration-gallery</a></td>
+<td>Illustrates a finished essay end to end: picks the image-worthy moments, generates consistent images, and builds the gallery page.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="feature-blueprint the pre-development gate: press release, user tests, release-note draft, guide updates and marketing pack, all before one line of code.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/feature-blueprint">feature-blueprint</a></td>
+<td>The pre-development gate: press release, user tests, release-note draft, guide updates and marketing pack, all before one line of code.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="frontend-taste stronger design instincts for anything web-built: varied layouts, real typography, restrained color, and screenshot-verified results.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/frontend-taste">frontend-taste</a></td>
+<td>Stronger design instincts for anything web-built: varied layouts, real typography, restrained color, and screenshot-verified results.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="goal-prompt-generator turns a fuzzy plan into a bounded objective for an agent, with a definition of done, hard limits and stop conditions.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/goal-prompt-generator">goal-prompt-generator</a></td>
+<td>Turns a fuzzy plan into a bounded objective for an agent, with a definition of done, hard limits and stop conditions.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="heavy-file-ingestion converts big, agent-hostile files (large pdfs, decks, spreadsheets) into light readable artifacts before any analysis begins.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/heavy-file-ingestion">heavy-file-ingestion</a></td>
+<td>Converts big, agent-hostile files (large PDFs, decks, spreadsheets) into light readable artifacts before any analysis begins.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="html-artifacts turns dense output (plans, research, reviews, comparisons) into one polished, self-contained html page.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/html-artifacts">html-artifacts</a></td>
+<td>Turns dense output (plans, research, reviews, comparisons) into one polished, self-contained HTML page.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="human-gate the stop line for high-stakes work: agents prepare, draft and validate; a human reviews, signs, sends, files or pays.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/human-gate">human-gate</a></td>
+<td>The stop line for high-stakes work: agents prepare, draft and validate; a human reviews, signs, sends, files or pays.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="image-gateway generates or edits images through one api with a single command and no per-call setup.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/image-gateway">image-gateway</a></td>
+<td>Generates or edits images through one API with a single command and no per-call setup.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="image-model-arena builds side-by-side comparison pages for image-generation models running the same prompts.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/image-model-arena">image-model-arena</a></td>
+<td>Builds side-by-side comparison pages for image-generation models running the same prompts.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="kara-release-notes kara's ship ritual: write the notes entry, release to the self-update feed, publish the updates pages.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/kara-release-notes">kara-release-notes</a></td>
+<td>Kara's ship ritual: write the notes entry, release to the self-update feed, publish the updates pages.</td>
+<td><span class="surf">claude</span></td></tr>
+<tr data-k="link-digest summarizes and rates any link thomas shares in telegram, and books an evening reading slot when it is worth the time.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/link-digest">link-digest</a></td>
+<td>Summarizes and rates any link Thomas shares in Telegram, and books an evening reading slot when it is worth the time.</td>
+<td><span class="surf">claude</span><span class="surf">openclaw</span><span class="surf">oracle</span></td></tr>
+<tr data-k="media-transcription transcribes audio and video files into clean transcripts with timestamps, chapters and speaker labels.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/media-transcription">media-transcription</a></td>
+<td>Transcribes audio and video files into clean transcripts with timestamps, chapters and speaker labels.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="meeting-synthesis turns a meeting recording or transcript into takeaways, decisions with owners, action items and open questions.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/meeting-synthesis">meeting-synthesis</a></td>
+<td>Turns a meeting recording or transcript into takeaways, decisions with owners, action items and open questions.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="meetingbrief prepares a meeting: pulls the calendar event, researches the external attendees, and delivers the brief to telegram.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/meetingbrief">meetingbrief</a></td>
+<td>Prepares a meeting: pulls the calendar event, researches the external attendees, and delivers the brief to Telegram.</td>
+<td><span class="surf">claude</span><span class="surf">openclaw</span><span class="surf">oracle</span></td></tr>
+<tr data-k="my-voice encodes how thomas actually writes, per context, so drafts sound like him instead of like an ai.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/my-voice">my-voice</a></td>
+<td>Encodes how Thomas actually writes, per context, so drafts sound like him instead of like an AI.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="nle-assistant drives the video editor (davinci resolve) directly: silence removal, subclips and timelines built inside the real project.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/nle-assistant">nle-assistant</a></td>
+<td>Drives the video editor (DaVinci Resolve) directly: silence removal, subclips and timelines built inside the real project.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="open-agent-engine the runner playbook for the linear task queue: claim exactly one task, do the scoped work, leave receipts.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/open-agent-engine">open-agent-engine</a></td>
+<td>The runner playbook for the Linear task queue: claim exactly one task, do the scoped work, leave receipts.</td>
+<td><span class="surf">codex</span></td></tr>
+<tr data-k="open-brain-case-store keeps the normalized case-file records inside open brain instead of a local database.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/open-brain-case-store">open-brain-case-store</a></td>
+<td>Keeps the normalized case-file records inside Open Brain instead of a local database.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="openbrain search, capture and log to open brain, the durable knowledge base of decisions, meetings, people and context.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/openbrain">openbrain</a></td>
+<td>Search, capture and log to Open Brain, the durable knowledge base of decisions, meetings, people and context.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="packet-export packages reviewed outputs into an editable folder and pdf: draft, citation map, checklist and source manifest.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/packet-export">packet-export</a></td>
+<td>Packages reviewed outputs into an editable folder and PDF: draft, citation map, checklist and source manifest.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="page-testing-memory keeps page-specific testing facts (selectors, test accounts, cleanup quirks) in repo-local runbooks where they belong.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/page-testing-memory">page-testing-memory</a></td>
+<td>Keeps page-specific testing facts (selectors, test accounts, cleanup quirks) in repo-local runbooks where they belong.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="para-ai-filing-context teaches agents the para filing logic before they save, export or publish any deliverable, so nothing gets misfiled.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/para-ai-filing-context">para-ai-filing-context</a></td>
+<td>Teaches agents the PARA filing logic before they save, export or publish any deliverable, so nothing gets misfiled.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="para-filing-auditor audits and reorganizes the para filing systems on dropbox and google drive, always plan-first with explicit approval.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/para-filing-auditor">para-filing-auditor</a></td>
+<td>Audits and reorganizes the PARA filing systems on Dropbox and Google Drive, always plan-first with explicit approval.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="para-organizer sets up or cleans a para folder structure (projects, areas, resources, archives) on the local file system.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/para-organizer">para-organizer</a></td>
+<td>Sets up or cleans a PARA folder structure (Projects, Areas, Resources, Archives) on the local file system.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">oracle</span></td></tr>
+<tr data-k="pdf-document-ingestion converts pdfs, scans and forms into markdown or tables with stable references back to the exact source spot.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/pdf-document-ingestion">pdf-document-ingestion</a></td>
+<td>Converts PDFs, scans and forms into markdown or tables with stable references back to the exact source spot.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="project-intake-router sets up a new project properly before work starts: para home, folder structure, brief, milestones, skills and human gates.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/project-intake-router">project-intake-router</a></td>
+<td>Sets up a new project properly before work starts: PARA home, folder structure, brief, milestones, skills and human gates.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="radio-edit locks the spoken narrative of a video first, as a transcript-driven rough cut, before any visuals are touched.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/radio-edit">radio-edit</a></td>
+<td>Locks the spoken narrative of a video first, as a transcript-driven rough cut, before any visuals are touched.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="reading-pack-builder builds a controlled local reading page from a pile of documents so review happens in one place.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/reading-pack-builder">reading-pack-builder</a></td>
+<td>Builds a controlled local reading page from a pile of documents so review happens in one place.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="release-briefing turns gathered data about a significant release in the field into a clear, decision-ready briefing.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/release-briefing">release-briefing</a></td>
+<td>Turns gathered data about a significant release in the field into a clear, decision-ready briefing.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="ringer the verified-swarm playbook: batches of work routed to cheap workers, with executable checks deciding pass or fail.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/ringer">ringer</a></td>
+<td>The verified-swarm playbook: batches of work routed to cheap workers, with executable checks deciding pass or fail.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="self-pr-merge reviews and merges thomas's own pull requests with real discipline despite github's self-approval limits.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/self-pr-merge">self-pr-merge</a></td>
+<td>Reviews and merges Thomas's own pull requests with real discipline despite GitHub's self-approval limits.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="session-operating-map a per-project map of parallel agent sessions so lanes of work stay named and never collide.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/session-operating-map">session-operating-map</a></td>
+<td>A per-project map of parallel agent sessions so lanes of work stay named and never collide.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="session-to-skill-extractor reviews a finished work session for reusable patterns and drafts them as new or updated skills.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/session-to-skill-extractor">session-to-skill-extractor</a></td>
+<td>Reviews a finished work session for reusable patterns and drafts them as new or updated skills.</td>
+<td><span class="surf all">all agents</span></td></tr>
+<tr data-k="site-publisher publishes a finished page to the personal or company website as a real, share-ready url.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/site-publisher">site-publisher</a></td>
+<td>Publishes a finished page to the personal or company website as a real, share-ready URL.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="skills-status shows every catalog skill with a check of whether it is installed in the agent you are talking to.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/skills-status">skills-status</a></td>
+<td>Shows every catalog skill with a check of whether it is installed in the agent you are talking to.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="sqlite-case-store a local sqlite database for source documents, chunks, normalized records and validation results.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/sqlite-case-store">sqlite-case-store</a></td>
+<td>A local SQLite database for source documents, chunks, normalized records and validation results.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="stakeholder-update-email after work ships, sends or drafts a short, truthful update email to the person who needs to know.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/stakeholder-update-email">stakeholder-update-email</a></td>
+<td>After work ships, sends or drafts a short, truthful update email to the person who needs to know.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="start-here the front-door reflex for every task: recap open loops, run the routing test out loud, pick the lightest tool that still leaves an inspectable result.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/start-here">start-here</a></td>
+<td>The front-door reflex for every task: recap open loops, run the routing test out loud, pick the lightest tool that still leaves an inspectable result.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">hermes</span><span class="surf">openclaw</span><span class="surf">openglow</span><span class="surf">oracle</span></td></tr>
+<tr data-k="testing-runbook-creator ensures testing discoveries get written into runbooks instead of dying in the chat where they were found.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/testing-runbook-creator">testing-runbook-creator</a></td>
+<td>Ensures testing discoveries get written into runbooks instead of dying in the chat where they were found.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="visible-delegation lets one agent drive another in a shared terminal session so delegated work stays visible.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/visible-delegation">visible-delegation</a></td>
+<td>Lets one agent drive another in a shared terminal session so delegated work stays visible.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+<tr data-k="weekly-signal-diff reviews a defined set of inputs on a cadence and reports only what changed since last time.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/weekly-signal-diff">weekly-signal-diff</a></td>
+<td>Reviews a defined set of inputs on a cadence and reports only what changed since last time.</td>
+<td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">oracle</span></td></tr>
+</tbody></table></div>
+<script>
+const q=document.getElementById("q"),n=document.getElementById("n"),rs=[...document.querySelectorAll("#rows tr")];
+q.addEventListener("input",()=>{const v=q.value.toLowerCase().trim();let c=0;
+for(const r of rs){const hit=!v||r.dataset.k.includes(v);r.style.display=hit?"":"none";if(hit)c++;}
+n.textContent=c+" skill"+(c===1?"":"s");});
+</script>
+<footer>Agent Hub · built 2026-09-07 · <a href="./index.html">all agents</a></footer>
+</div>
+</body>
+</html>
