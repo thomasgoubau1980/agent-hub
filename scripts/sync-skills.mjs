@@ -39,7 +39,7 @@ function description(skillDir) {
 
 /* surfaces per skill from manifests */
 const SURFACE_LABELS = {
-  "claude-code": "Claude Code", hermes: "Hermes", codex: "Codex",
+  "claude-code": "Claude Code", grok: "Grok", hermes: "Hermes", codex: "Codex",
   openclaw: "OpenClaw", openglow: "OpenGlow", brian: "Brian", oracle: "Oracle",
 };
 const surfacesOf = {};
@@ -54,6 +54,11 @@ for (const f of readdirSync(manifestsDir).filter((f) => f.endsWith(".yaml"))) {
     if (m) (surfacesOf[m[1]] ??= []).push(target);
   }
 }
+
+// Grok CLI natively reads ~/.claude/skills (Claude Code compatibility), so it
+// mirrors the claude-code surface; there is no separate grok manifest.
+for (const list of Object.values(surfacesOf))
+  if (list.includes("claude-code")) list.push("grok");
 
 const skillsDir = join(CATALOG, "skills");
 const skills = readdirSync(skillsDir)

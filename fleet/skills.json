@@ -3,6 +3,7 @@
   "catalog": "github.com/thomasgoubau1980/personal-agent-skills",
   "surfaceLabels": {
     "claude-code": "Claude Code",
+    "grok": "Grok",
     "hermes": "Hermes",
     "codex": "Codex",
     "openclaw": "OpenClaw",
@@ -19,6 +20,7 @@
         "brian",
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -33,6 +35,7 @@
         "claude-code",
         "codex",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -46,6 +49,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -56,6 +60,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -66,6 +71,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -79,6 +85,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -89,6 +96,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -99,6 +107,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -109,6 +118,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -118,6 +128,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "oracle"
       ]
     },
@@ -128,6 +139,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -137,6 +149,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "hermes",
         "oracle"
       ]
@@ -148,6 +161,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -158,6 +172,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -170,6 +185,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "openclaw",
         "oracle"
       ]
@@ -180,6 +196,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "openclaw",
         "oracle"
       ]
@@ -191,6 +208,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -210,6 +228,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -220,6 +239,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -231,6 +251,7 @@
         "brian",
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -244,6 +265,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -255,6 +277,7 @@
         "brian",
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -268,6 +291,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -278,6 +302,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -288,6 +313,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -298,6 +324,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -308,6 +335,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -318,6 +346,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -328,6 +357,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -336,7 +366,8 @@
       "purpose": "Kara's ship ritual: write the notes entry, release to the self-update feed, publish the updates pages.",
       "curated": true,
       "surfaces": [
-        "claude-code"
+        "claude-code",
+        "grok"
       ]
     },
     {
@@ -345,6 +376,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "openclaw",
         "oracle"
       ]
@@ -356,6 +388,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -366,6 +399,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -375,6 +409,7 @@
       "curated": true,
       "surfaces": [
         "claude-code",
+        "grok",
         "openclaw",
         "oracle"
       ]
@@ -386,6 +421,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -396,6 +432,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -414,6 +451,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -424,6 +462,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -437,6 +476,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -447,6 +487,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -457,6 +498,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -470,6 +512,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -483,6 +526,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "oracle"
       ]
@@ -494,6 +538,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -504,6 +549,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -517,6 +563,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -527,6 +574,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -537,6 +585,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -547,6 +596,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -558,6 +608,7 @@
         "claude-code",
         "codex",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -571,6 +622,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -582,6 +634,7 @@
         "claude-code",
         "codex",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -595,6 +648,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -605,6 +659,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -618,6 +673,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -628,6 +684,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -638,6 +695,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "hermes",
         "openclaw",
         "openglow",
@@ -651,6 +709,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -661,6 +720,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     },
@@ -671,6 +731,7 @@
       "surfaces": [
         "claude-code",
         "codex",
+        "grok",
         "oracle"
       ]
     }

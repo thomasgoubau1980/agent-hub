@@ -421,7 +421,7 @@ ${items || "<p class='sec-sub'>No releases yet.</p>"}`;
 
 function buildSkillsPage(data) {
   const total = Object.keys(data.surfaceLabels).length;
-  const short = { "claude-code": "claude", hermes: "hermes", codex: "codex",
+  const short = { "claude-code": "claude", grok: "grok", hermes: "hermes", codex: "codex",
     openclaw: "openclaw", openglow: "openglow", brian: "brian", oracle: "oracle" };
   const rows = data.skills
     .map((s) => {
