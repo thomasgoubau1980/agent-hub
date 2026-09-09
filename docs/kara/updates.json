@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.2.18",
+    "date": "2026-09-09",
+    "title": "One queue, one tap: Kara proposes the filing, you say when",
+    "url": "./kara/updates.html#v0.2.18"
+  },
+  {
+    "agent": "kara",
     "version": "iPhone & iPad build 20",
     "date": "2026-09-07",
     "title": "Reject in one tap, undo if you change your mind",
