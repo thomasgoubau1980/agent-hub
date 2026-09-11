@@ -124,8 +124,18 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
   <span class="eyebrow">Kara · Release notes</span>
   <h1>What shipped</h1>
   <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork. Newest first.</p>
-  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.2.19 · 11 September 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
+  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.2.20 · 11 September 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
 </header>
+
+<section class="rel" id="v0.2.20">
+  <div class="sec-num"><b>V0.2.20</b> · 11 SEP 2026</div>
+  <h2>Connect Google Calendar actually opens the browser now</h2>
+  <p class="sec-sub">v0.2.19 removed the configuration error but the Connect button then failed silently: the app never asked the system for permission to start its local sign-in listener, and the resulting refusal was swallowed instead of shown. Both fixed.</p>
+  
+  
+  <div class="notes"><div class="note"><b>Connect works end to end.</b><span>Profile → Connect Google Calendar opens your browser on Google's consent screen; approve once and meetings flow into Today and the planner.</span></div>
+<div class="note"><b>No more silent failures.</b><span>If anything in the sign-in path goes wrong from now on, the exact reason appears in red under the button instead of nothing happening.</span></div></div>
+</section>
 
 <section class="rel" id="v0.2.19">
   <div class="sec-num"><b>V0.2.19</b> · 11 SEP 2026</div>

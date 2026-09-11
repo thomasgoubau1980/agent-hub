@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.2.20",
+    "date": "2026-09-11",
+    "title": "Connect Google Calendar actually opens the browser now",
+    "url": "./kara/updates.html#v0.2.20"
+  },
+  {
+    "agent": "kara",
     "version": "0.2.19",
     "date": "2026-09-11",
     "title": "Google Calendar connects on the desktop now",
