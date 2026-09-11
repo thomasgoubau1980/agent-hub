@@ -124,8 +124,18 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
   <span class="eyebrow">Kara · Release notes</span>
   <h1>What shipped</h1>
   <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork. Newest first.</p>
-  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: iPhone &amp; iPad build 21 · 9 September 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
+  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.2.19 · 11 September 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
 </header>
+
+<section class="rel" id="v0.2.19">
+  <div class="sec-num"><b>V0.2.19</b> · 11 SEP 2026</div>
+  <h2>Google Calendar connects on the desktop now</h2>
+  <p class="sec-sub">The Connect Google Calendar button on the desktop stopped at "Add the Google Desktop OAuth client ID and secret" since the sync shipped in August. That gap is closed: the app now carries its own Google Desktop client (same Google project as the iPhone's, so the consent screen and Calendar access were already proven there).</p>
+  
+  
+  <div class="notes"><div class="note"><b>To connect:</b><span>Profile → Connect Google Calendar. Your browser opens Google's consent screen once; approve, and meetings flow into the Today day stream and the planner, with declined invites and all-day events filtered as on iOS.</span></div>
+<div class="note"><b>Two-way stays two-way.</b><span>Slots and timed tasks you place in Kara still write back to your calendar.</span></div></div>
+</section>
 
 <section class="rel" id="iphone-ipad-build-21">
   <div class="sec-num"><b>IPHONE &amp; IPAD BUILD 21</b> · 9 SEP 2026</div>
@@ -622,7 +632,7 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <div class="note"><span>A sync guard stops the Waiting-For list from being overwritten by stale snapshots.</span></div>
 <div class="note"><span>Google Calendar on desktop moved to a proper PKCE loopback OAuth flow, with event fetch and the merged Today agenda.</span></div></div>
 </section>
-<footer>Agent Hub · built 2026-09-09 · <a href="../index.html">all agents</a></footer>
+<footer>Agent Hub · built 2026-09-11 · <a href="../index.html">all agents</a></footer>
 </div>
 </body>
 </html>

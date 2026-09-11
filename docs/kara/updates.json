@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.2.19",
+    "date": "2026-09-11",
+    "title": "Google Calendar connects on the desktop now",
+    "url": "./kara/updates.html#v0.2.19"
+  },
+  {
+    "agent": "kara",
     "version": "iPhone & iPad build 21",
     "date": "2026-09-09",
     "title": "Catch Up decides everything now, on the couch too",
