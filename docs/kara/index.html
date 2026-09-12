@@ -124,21 +124,38 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
   <span class="eyebrow">Kara · User guide</span>
   <h1>Kara</h1>
   <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork.</p>
-  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.2.21</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
+  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: iPhone &amp; iPad build 22</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
 </header>
 <h1 id="what-kara-is">What Kara is</h1>
-<p>Kara is the Deep Focus productivity system: one place that answers "what should I be doing right now?" It merges your priorities, calendar and captured tasks into a single daily view, and it runs everywhere you work: a <strong>Mac desktop app</strong>, an <strong>iPhone and iPad app</strong> (TestFlight), and a <strong>Telegram agent</strong> that does the legwork of capturing and suggesting tasks for you.</p>
-<p>Tasks live in Todoist underneath, the calendar is your real Google Calendar, and everything syncs across devices through the cloud. You never manage the plumbing; you approve what shows up.</p>
-<h1 id="the-surfaces">The surfaces</h1>
-<p>A persistent sidebar (tab bar on iPhone) switches between:</p>
-<div class="tablewrap"><table><thead><tr><th>Surface</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Overview</strong></td><td>Priorities and Agenda in one toggle. Priorities shows the hero reset, weekly goals, Top 3 and habits; Agenda is a drag-and-drop timeline planner with a "to plan" tray.</td></tr><tr><td><strong>Inbox</strong></td><td>Triage and Capture. A decide-deck routes each captured item to a project, the admin lane, reference, Maybe Later, or archive.</td></tr><tr><td><strong>Projects &amp; Areas</strong></td><td>Projects grouped by focus horizon with status dots; areas with standards; a one-pager per project.</td></tr><tr><td><strong>Weekly Review</strong></td><td>The GTD rhythm: get clear, triage, get current, get creative.</td></tr><tr><td><strong>Timer</strong></td><td>A Pomodoro timer with a circular progress ring, anchored to the wall clock.</td></tr><tr><td><strong>Profile</strong></td><td>Pomodoro settings, Todoist and Google Calendar connections, data controls.</td></tr></tbody></table></div>
-<h1 id="a-normal-day-with-kara">A normal day with Kara</h1>
-<ol><li><strong>Morning.</strong> Open Overview. The Top 3 and weekly goals are already there; the Agenda shows meetings from Google Calendar merged with planned focus blocks.</li><li><strong>All day.</strong> Anything on your mind goes into Capture (or is sent to the Kara agent on Telegram). Nothing needs sorting at capture time.</li><li><strong>When you choose.</strong> Run Triage: the decide-deck deals you each inbox item once, and you route it in one tap.</li><li><strong>The agent works for you.</strong> The Kara agent sweeps your meetings, email and Slack for likely tasks and puts them in the <strong>Suggested</strong> buffer. You approve or reject each one; rejected suggestions teach it what not to bring you.</li><li><strong>Friday or Sunday.</strong> Weekly Review walks you through getting clear and current in one sitting.</li></ol>
+<p>Kara is the Deep Focus productivity system: one place that answers "what should I be doing right now?" It connects priorities, calendar events, captured tasks, projects, and the working day across the Mac desktop app and the iPhone and iPad app.</p>
+<p>Tasks live in Todoist underneath, meetings stay in Google Calendar, and Kara keeps the useful working context around them.</p>
+<h1 id="today-carries-the-working-day">Today carries the working day</h1>
+<p>Today has three moments on one surface. Morning connects the week to today's priorities and lets you arrange focus and admin blocks against the real calendar. Active day is the quieter execution view. Closing gives every remaining open loop a destination. Missing one of these moments never blocks Today.</p>
+<p>On iPhone, use the top-left menu for Today, Inbox, Projects, Weekly Review, Timer, and Profile. The bottom control inside Today switches only between Morning, Active, and Closing. On iPad and desktop, use the sidebar.</p>
+<figure class="shot"><img src="assets/today-desktop.png" alt="Today on desktop, with priorities and the real-scale morning agenda" loading="lazy"><figcaption>Today on desktop, with priorities and the real-scale morning agenda</figcaption></figure>
+<h2 id="morning">Morning</h2>
+<p>Choose the work that realistically belongs today, then place it against the day's real time scale. Meetings keep their calendar time. Focus and admin blocks contain tasks and may be moved or created here. Tasks selected from All open tasks enter Today's unplaced backlog until you place them in a block.</p>
+<h2 id="active-day">Active day</h2>
+<p>Run the agenda in time order. Focus and admin blocks expose their tasks. Meeting actions open the agenda, open Calendar, or skip the meeting without changing the calendar event. Tasks added during Active day enter the Unplaced today tray, where they can be placed into an existing block. New blocks are created in Morning, not in Active day.</p>
+<h2 id="closing">Closing</h2>
+<p>Each unfinished item receives the same choices: Done, Tomorrow, Project, Waiting for, or Keep open. The Inbox count links directly to Inbox so it can be cleaned before closing. A note for tomorrow is optional and is also available during Active day.</p>
+<h1 id="clear-the-inbox">Clear the Inbox</h1>
+<p>Inbox contains captures that still need clarification. It is separate from All open tasks, Today's unplaced backlog, and the open loops shown in Closing.</p>
+<p>For each item, confirm three things:</p>
+<ol><li>What kind of work it is: Focus, Admin, Reference, or None.</li><li>Where it belongs: choose from the full project and area list.</li><li>When it belongs: Today, Tomorrow, This week, or Backlog.</li></ol>
+<p>Kara predicts these values when it can, but every value remains editable. The completion circle archives the task. Edit changes its title and description. File &amp; Next files the current task and immediately advances to the next item in the queue.</p>
+<figure class="shot"><img src="assets/inbox-ipad.png" alt="Inbox on iPad, with the queue beside the current decision" loading="lazy"><figcaption>Inbox on iPad, with the queue beside the current decision</figcaption></figure>
+<p>On iPhone, swipe left to reveal timing choices. Swipe right partway for File &amp; Next, Decide later, or Delete. A full right swipe accepts the predictions and files the item. Tap an item when you need to correct its work kind or project or area.</p>
+<figure class="shot"><img src="assets/inbox-iphone.png" alt="Inbox on iPhone, with the full decision and File &amp; Next action" loading="lazy"><figcaption>Inbox on iPhone, with the full decision and File &amp; Next action</figcaption></figure>
+<h1 id="capture">Capture</h1>
+<p>Capture is available from the global header. A task sent to Inbox waits for clarification. A task sent to Today enters Today's unplaced backlog. A task sent to a project is filed there. Captures remain visible in All open tasks, and unresolved captures appear again during Closing.</p>
+<h1 id="projects-review-and-focus">Projects, review, and focus</h1>
+<ul><li><strong>Projects &amp; Areas</strong> groups active projects by focus horizon and keeps each project's one-page context and next actions together.</li><li><strong>Weekly Review</strong> walks through getting clear, current, and ready for the coming week.</li><li><strong>Timer</strong> starts focused work from a task or block and keeps the current focus anchored to wall-clock time.</li><li><strong>Profile</strong> contains Todoist, Google Calendar, sync, and Pomodoro settings.</li></ul>
 <h1 id="getting-set-up">Getting set up</h1>
-<ul><li><strong>Mac:</strong> install Kara.app. It updates itself: when a release ships, a dialog offers "Update &amp; restart" on launch.</li><li><strong>iPhone and iPad:</strong> install via TestFlight (app name "Kara Focus").</li><li><strong>Connections:</strong> in Profile, connect Todoist (personal API token) and Google Calendar. Both are read-write and take effect immediately.</li><li><strong>Sync:</strong> sign in with your Kara account once per device; changes sync across Mac, iPhone and iPad automatically.</li></ul>
+<ul><li><strong>Mac:</strong> install Kara.app. It updates itself and offers Update &amp; restart after a desktop release ships.</li><li><strong>iPhone and iPad:</strong> install Kara Focus through TestFlight.</li><li><strong>Connections:</strong> connect Todoist and Google Calendar from Profile.</li><li><strong>Sync:</strong> sign in once per device so supported Kara state can follow you between Mac, iPhone, and iPad.</li></ul>
 <h1 id="where-releases-come-from">Where releases come from</h1>
-<p>The desktop app offers each release itself with a one-click update dialog; iPhone and iPad builds arrive via TestFlight. Everything that ships is documented on the <a href="updates.html">release notes</a> page, newest first.</p>
-<footer>Agent Hub · built 2026-09-11 · <a href="../index.html">all agents</a></footer>
+<p>Desktop releases arrive through Kara's one-click updater. iPhone and iPad builds arrive through TestFlight. Every user-visible release is documented on the <a href="updates.html">release notes</a> page.</p>
+<footer>Agent Hub · built 2026-09-12 · <a href="../index.html">all agents</a></footer>
 </div>
 </body>
 </html>

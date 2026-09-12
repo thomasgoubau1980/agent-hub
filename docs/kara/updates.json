@@ -1,6 +1,20 @@
 [
   {
     "agent": "kara",
+    "version": "iPhone & iPad build 22",
+    "date": "2026-09-12",
+    "title": "Today and Inbox now travel together",
+    "url": "./kara/updates.html#iphone-ipad-build-22"
+  },
+  {
+    "agent": "kara",
+    "version": "0.2.22",
+    "date": "2026-09-12",
+    "title": "Today and Inbox become one coherent daily flow",
+    "url": "./kara/updates.html#v0.2.22"
+  },
+  {
+    "agent": "kara",
     "version": "0.2.21",
     "date": "2026-09-11",
     "title": "Choose which calendars Kara shows",
