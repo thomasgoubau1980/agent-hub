@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.2.24",
+    "date": "2026-09-14",
+    "title": "The white screen on launch is fixed",
+    "url": "./kara/updates.html#v0.2.24"
+  },
+  {
+    "agent": "kara",
     "version": "iPhone & iPad build 22",
     "date": "2026-09-12",
     "title": "Today and Inbox now travel together",
