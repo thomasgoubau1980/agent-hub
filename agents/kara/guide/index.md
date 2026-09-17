@@ -1,65 +1,73 @@
 # What Kara is
 
-Kara is the Deep Focus productivity system: one place that answers "what should I be doing right now?" It connects priorities, calendar events, captured tasks, projects, and the working day across the Mac desktop app and the iPhone and iPad app.
+Kara is a working system, not a single app. It answers one question all day: what should I be doing right now? Four parts share the work, and each one does only what it is best at:
 
-Tasks live in Todoist underneath, meetings stay in Google Calendar, and Kara keeps the useful working context around them.
+| Part | Job | You use it for |
+|---|---|---|
+| **Todoist** | Captures everything | Getting things out of your head, fast, from anywhere |
+| **Akiflow** | Plans the week and the day | Picking priorities, time blocking, the planning rituals |
+| **Kara app** (Mac, iPhone, iPad) | Runs the day | Meetings, the tasks they produce, today's plan in one view |
+| **Kara agent** | Works in the background | Turning meetings and mail into tasks, enriching and tagging captures |
 
-# Today carries the working day
+Underneath, tasks live in Todoist and time lives in Google Calendar. Akiflow and the Kara app are windows onto those two, so nothing you do in one place gets lost in another.
 
-Today has three moments on one surface. Morning connects the week to today's priorities and lets you arrange focus and admin blocks against the real calendar. Active day is the quieter execution view. Closing gives every remaining open loop a destination. Missing one of these moments never blocks Today.
+# Capture: everything goes to Todoist
 
-On iPhone, use the top-left menu for Today, Inbox, Projects, Weekly Review, Timer, and Profile. The bottom control inside Today switches only between Morning, Active, and Closing. On iPad and desktop, use the sidebar.
+Never keep a task in your head or park it in a notes app. Say it, type it, or forward it into Todoist, unsorted is fine. The Inbox is allowed to be messy because clean-up is not your job:
 
-![Today on desktop, with priorities and the real-scale morning agenda](assets/today-desktop.png)
+- The **sweep** runs three times a day and turns your meetings, mail, and Slack into suggested tasks, each with a note on where it came from and why.
+- The **enrichment pass** runs hourly on the Inbox. Every capture gets: a summary of any link it contains (the agent reads the page for you), a nature tag, and a proposed project written into the description.
 
-## Morning
+You never have to open a link to know whether a task deserves your time.
 
-Choose the work that realistically belongs today, then place it against the day's real time scale. Meetings keep their calendar time. Focus and admin blocks contain tasks and may be moved or created here. Tasks selected from All open tasks enter Today's unplaced backlog until you place them in a block.
+# The three tags
 
-## Active day
+The agent tags every Inbox task. Two describe what kind of work it is, one nominates it for your attention:
 
-Run the agenda in time order. Focus and admin blocks expose their tasks. Meeting actions open the agenda, open Calendar, or skip the meeting without changing the calendar event. Tasks added during Active day enter the Unplaced today tray, where they can be placed into an existing block. New blocks are created in Morning, not in Active day.
+| Tag | Meaning | Rule the agent applies |
+|---|---|---|
+| `focus` | Deep work | Needs 25 minutes or more of uninterrupted work by you: writing, analysis, preparation, review. Belongs inside a 90-minute Focus block. |
+| `admin` | Small stuff | 15 minutes or less: pay, book, confirm, forward, chase. Several of these get batched into one Admin block. |
+| `key` | Top-3 candidate | A nomination only, and rare: a hard deadline within 48 hours, direct revenue or customer impact, or it unblocks someone else. At most three per day. |
 
-## Closing
+Every task is either focus or admin. `key` comes on top and is deliberately strict: if everything is key, nothing is. The agent only nominates; choosing the actual top 3 of the day is yours, every morning, in Akiflow.
 
-Each unfinished item receives the same choices: Done, Tomorrow, Project, Waiting for, or Keep open. The Inbox count links directly to Inbox so it can be cleaned before closing. A note for tomorrow is optional and is also available during Active day.
+# The daily routine
 
-# Clear the Inbox
+**Morning, in Akiflow (5 to 10 minutes).** Run the Daily Planning ritual:
 
-Inbox contains captures that still need clarification. It is separate from All open tasks, Today's unplaced backlog, and the open loops shown in Closing.
+1. Glance at yesterday: anything unfinished moves forward or gets dropped consciously.
+2. Pick your 1 to 3 **Goals** for today (press H on a task). The agent's `key` nominations are your shortlist, but the choice is yours.
+3. Clear the inbox: every task gets a when (today, a day this week, the weekly bucket, someday) or gets deleted. The agent's summary and proposed project in each description mean you rarely need to open anything.
+4. Block the day: drag focus tasks into a 90-minute Focus block, let the small stuff collect in the Admin block.
 
-For each item, confirm three things:
+**During the day, in the Kara app.** This is your landing page: today's meetings at real scale, the tasks inside each block, and new tasks appearing as meetings finish. Capture anything new straight into Todoist and keep going.
 
-1. What kind of work it is: Focus, Admin, Reference, or None.
-2. Where it belongs: choose from the full project and area list.
-3. When it belongs: Today, Tomorrow, This week, or Backlog.
+**Closing, in the Kara app.** Give every leftover a destination: done, tomorrow, a project, waiting-for, or consciously kept open. Two minutes, and tomorrow starts clean.
 
-Kara predicts these values when it can, but every value remains editable. The completion circle archives the task. Edit changes its title and description. File & Next files the current task and immediately advances to the next item in the queue.
+# The weekly routine
 
-![Inbox on iPad, with the queue beside the current decision](assets/inbox-ipad.png)
+**Friday afternoon, in Akiflow.** Plan the coming week:
 
-On iPhone, swipe left to reveal timing choices. Swipe right partway for File & Next, Decide later, or Delete. A full right swipe accepts the predictions and files the item. Tap an item when you need to correct its work kind or project or area.
+1. Review this week: what shipped, what slipped, what should stop.
+2. Pull next week's work from the weekly bucket and your projects, and give the important items a day.
+3. Lay in the recurring structure: Focus blocks on your best hours, the Admin block, and leave slack. A plan that fills every hour fails by Tuesday.
 
-![Inbox on iPhone, with the full decision and File & Next action](assets/inbox-iphone.png)
+Projects and areas themselves are reviewed in Todoist, where they mirror your PARA filing. Akiflow deliberately keeps almost no projects of its own: it is about when, not where.
 
-# Capture
+# Time blocks
 
-Capture is available from the global header. A task sent to Inbox waits for clarification. A task sent to Today enters Today's unplaced backlog. A task sent to a project is filed there. Captures remain visible in All open tasks, and unresolved captures appear again during Closing.
+- **Focus block:** 90 minutes, one to two `focus` tasks, no meetings, no inbox. Protect at least one per day.
+- **Admin block:** 30 to 45 minutes, recurring, eats the `admin` tasks in batch. One good admin block beats admin scattered through the day.
+- Blocks you create in Akiflow appear on your Google Calendar, so the Kara app and everyone who sees your availability respects them.
 
-# Projects, review, and focus
+# Waiting on other people
 
-- **Projects & Areas** groups active projects by focus horizon and keeps each project's one-page context and next actions together.
-- **Weekly Review** walks through getting clear, current, and ready for the coming week.
-- **Timer** starts focused work from a task or block and keeps the current focus anchored to wall-clock time.
-- **Profile** contains Todoist, Google Calendar, sync, and Pomodoro settings.
+Delegated and waiting-for items get a digest every Monday and Friday morning so nothing you handed off silently dies.
 
-# Getting set up
+# Good to know
 
-- **Mac:** install Kara.app. It updates itself and offers Update & restart after a desktop release ships.
-- **iPhone and iPad:** install Kara Focus through TestFlight.
-- **Connections:** connect Todoist and Google Calendar from Profile.
-- **Sync:** sign in once per device so supported Kara state can follow you between Mac, iPhone, and iPad.
-
-# Where releases come from
-
-Desktop releases arrive through Kara's one-click updater. iPhone and iPad builds arrive through TestFlight. Every user-visible release is documented on the [release notes](updates.html) page.
+- **Tags stay in Todoist.** Akiflow shows each task's summary and proposed project (in the description) but not the labels. Your triage information is in the text.
+- **Only new activity syncs.** Tasks created or edited after the Todoist-Akiflow connection flow across; old untouched tasks stay where they are until you touch them.
+- **Deleting in Akiflow never deletes in Todoist.** Complete or reject instead of deleting when it matters.
+- **One scheduler per space.** Akiflow owns work blocks. If another tool also auto-blocks your calendar, give it a separate lane (personal habits, for example) or the two will fight over the same free hours.
