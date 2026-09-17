@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "GTD workflow v2",
+    "date": "2026-09-17",
+    "title": "One system, four parts, Akiflow joins for planning",
+    "url": "./kara/updates.html#gtd-workflow-v2"
+  },
+  {
+    "agent": "kara",
     "version": "0.2.24",
     "date": "2026-09-14",
     "title": "The white screen on launch is fixed",
