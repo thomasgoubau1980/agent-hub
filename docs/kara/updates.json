@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.3.0",
+    "date": "2026-09-20",
+    "title": "Kara is now your day companion: one lane for the day, one tap to triage",
+    "url": "./kara/updates.html#v0.3.0"
+  },
+  {
+    "agent": "kara",
     "version": "GTD workflow v2",
     "date": "2026-09-17",
     "title": "One system, four parts, Akiflow joins for planning",
