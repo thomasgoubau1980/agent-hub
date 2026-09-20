@@ -6,7 +6,7 @@ Kara is a working system, not a single app. It answers one question all day: wha
 |---|---|---|
 | **Todoist** | Captures everything | Getting things out of your head, fast, from anywhere |
 | **Akiflow** | Plans the week and the day | Picking priorities, time blocking, the planning rituals |
-| **Kara app** (Mac, iPhone, iPad) | Runs the day | Meetings, the tasks they produce, today's plan in one view |
+| **Kara app** (Mac, iPhone, iPad) | Runs the day | The one screen you live in between meetings: your blocks, your meetings and what they produce |
 | **Kara agent** | Works in the background | Turning meetings and mail into tasks, enriching and tagging captures |
 
 Underneath, tasks live in Todoist and time lives in Google Calendar. Akiflow and the Kara app are windows onto those two, so nothing you do in one place gets lost in another.
@@ -41,9 +41,9 @@ Every task is either focus or admin. `key` comes on top and is deliberately stri
 3. Clear the inbox: every task gets a when (today, a day this week, the weekly bucket, someday) or gets deleted. The agent's summary and proposed project in each description mean you rarely need to open anything.
 4. Block the day: drag focus tasks into a 90-minute Focus block, let the small stuff collect in the Admin block.
 
-**During the day, in the Kara app.** This is your landing page: today's meetings at real scale, the tasks inside each block, and new tasks appearing as meetings finish. Capture anything new straight into Todoist and keep going.
+**During the day, in the Kara app.** Today is one time-ordered lane: your Akiflow blocks with their tasks, your meetings, and the NOW line. When a meeting ends, its summary and the tasks Kara extracted appear under the meeting card. Triage them where the context is, with three verbs: **Keep** (to Todoist, planned in Akiflow tomorrow), **Reject** (closed, with undo), **Reference** (filed to the Library). A notes rail keeps the day's scribbles; they sync everywhere and come back at Closing. The Triage surface holds everything not tied to a meeting (mail, Slack).
 
-**Closing, in the Kara app.** Give every leftover a destination: done, tomorrow, a project, waiting-for, or consciously kept open. Two minutes, and tomorrow starts clean.
+**Closing, in the Kara app.** Press Close the day: today's priorities, the kept meeting actions still open, and anything else chosen for today each get one of **Done**, **Tomorrow** (stays chosen for tomorrow) or **Plan later** (back to the pool for tomorrow's Akiflow planning). Write the note for tomorrow; it opens the next morning's Today. Two minutes, and the day is closed.
 
 # The weekly routine
 
@@ -67,6 +67,7 @@ Delegated and waiting-for items get a digest every Monday and Friday morning so 
 
 # Good to know
 
+- **The Kara app has four surfaces**: Today, Triage, Timer, Profile. Projects, reviews and planning are not hidden features, they live in Todoist and Akiflow by design.
 - **Tags stay in Todoist.** Akiflow shows each task's summary and proposed project (in the description) but not the labels. Your triage information is in the text.
 - **Only new activity syncs.** Tasks created or edited after the Todoist-Akiflow connection flow across; old untouched tasks stay where they are until you touch them.
 - **Deleting in Akiflow never deletes in Todoist.** Complete or reject instead of deleting when it matters.
