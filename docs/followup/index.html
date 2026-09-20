@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Follow-up Agent · User guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
+  --line:#D8DCD9; --accent:#B4531E; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
+  --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
+  --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
+  --line:#2C3441; --accent:#F0A26B; --accent-ink:#0F1420; --code-bg:#202734;
+  --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
+  --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
+  --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
+} }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+code, .mono { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  font-size:0.86em; background:var(--code-bg); padding:1px 5px; border-radius:3px; }
+.mono { background:none; padding:0; }
+.nav { position:sticky; top:0; z-index:10; background:var(--paper);
+  border-bottom:1px solid var(--line); display:flex; gap:4px; flex-wrap:wrap;
+  align-items:center; padding:10px clamp(16px,6vw,64px); }
+.nav a { font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:0.04em;
+  color:var(--ink-soft); text-decoration:none; padding:4px 10px; border-radius:999px; }
+.nav a:hover, .nav a.on { color:var(--accent); background:var(--panel); }
+.wrap { max-width:760px; margin:0 auto; padding:0 clamp(16px,6vw,32px) 96px; }
+header.masthead { padding-top:52px; }
+.eyebrow { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); }
+h1 { font-family:"Archivo",sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px);
+  line-height:1.05; letter-spacing:-0.015em; margin:10px 0 14px; text-wrap:balance; }
+h2 { font-family:"Archivo",sans-serif; font-weight:650; font-size:24px;
+  letter-spacing:-0.01em; line-height:1.25; margin:44px 0 10px; }
+h3 { font-family:"Archivo",sans-serif; font-weight:600; font-size:18px; margin:28px 0 8px; }
+.lede { font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0; }
+.badge { display:inline-flex; align-items:center; gap:6px; padding:3px 10px;
+  border-radius:999px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  font-weight:600; letter-spacing:0.04em; background:var(--panel); color:var(--ink-soft);
+  border:1px solid var(--line); }
+.badge.acc { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.strip { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; margin-top:22px; }
+section.rel { margin-top:56px; padding-top:8px; }
+.sec-num { font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600;
+  letter-spacing:0.06em; color:var(--ink-soft); }
+.sec-num b { color:var(--accent); font-weight:600; }
+section.rel h2 { margin:6px 0 8px; }
+.sec-sub { margin:0 0 18px; max-width:64ch; color:var(--ink-soft); font-size:15.5px; }
+ul, ol { padding-left:22px; margin:0 0 16px; }
+li { margin:6px 0; }
+li strong { color:var(--ink); }
+p { max-width:66ch; }
+blockquote { margin:16px 0; padding:10px 16px; border-left:3px solid var(--accent);
+  background:var(--panel); border-radius:0 8px 8px 0; color:var(--ink-soft); }
+.tablewrap { overflow-x:auto; margin:16px 0; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; }
+th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+  border-bottom:2px solid var(--line); padding:8px 12px 6px 0; }
+td { border-bottom:1px solid var(--line); padding:9px 12px 9px 0; vertical-align:top; }
+figure.shot { margin:22px 0; }
+figure.shot img { max-width:100%; border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); display:block; }
+figure.shot figcaption { font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-soft); margin-top:8px; }
+.duo { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:26px; align-items:start; }
+@media (max-width:780px) { .duo { grid-template-columns:1fr; } }
+.notes { display:flex; flex-direction:column; gap:12px; }
+.note { padding:13px 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:14px; font-size:14.5px; }
+.note b { display:block; margin-bottom:3px; }
+.note span { color:var(--ink-soft); }
+.try { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.mock { background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; margin-bottom:16px; }
+.filter { margin-top:30px; }
+.filter input { width:100%; max-width:420px; padding:10px 14px; font:inherit; font-size:15px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.filter input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+table.skills td:first-child { white-space:nowrap; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; padding-right:18px; }
+table.skills td:first-child a { text-decoration:none; }
+table.skills .surf { display:inline-block; margin:1px 3px 1px 0; padding:1px 7px;
+  border-radius:999px; background:var(--panel); border:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-soft); }
+table.skills .surf.all { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.count { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px; margin-top:36px; }
+.card { display:block; text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:16px; padding:22px 22px 18px;
+  box-shadow:var(--shadow); border-top:3px solid var(--card-accent, var(--accent));
+  transition:transform 0.12s ease; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { margin:0 0 6px; font-size:22px; }
+.card .tag { color:var(--ink-soft); font-size:14.5px; margin:0 0 14px; min-height:44px; }
+.card .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.card .links { margin-top:16px; display:flex; gap:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; }
+.card .links span { color:var(--card-accent, var(--accent)); }
+footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="../index.html">AGENT HUB</a><a href="index.html" class="on">GUIDE</a><a href="updates.html" class="">RELEASE NOTES</a></nav>
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Follow-up Agent · User guide</span>
+  <h1>Follow-up Agent</h1>
+  <p class="lede">Turns a recorded sales call into a validated brief, a Distribute follow-up page and an unsent email draft, in one Slack thread. Never sends anything itself.</p>
+  <div class="strip"><span class="badge acc">pilot</span><span class="badge">latest: "0.1"</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
+</header>
+<h1 id="what-the-follow-up-agent-does">What the Follow-up Agent does</h1>
+<p>After a sales call, someone has to write the follow-up: what the prospect said, what we answered, what happens next, and a page they can forward internally. The Follow-up Agent prepares all of that so the rep only has to read and send.</p>
+<p>It lives in Slack, in the channel <strong>#follow-up_channel</strong>, and works one call per thread. It reads the call recording, the email thread with the attendees and the HubSpot record, asks the questions only a human can answer, and then produces three things:</p>
+<ol><li>A <strong>brief</strong> in a Slack canvas, the single record of everything decided for that follow-up.</li><li>A <strong>ready-to-paste prompt for Dante</strong>, the AI inside Distribute, so the page gets built from the real transcript.</li><li>An <strong>email draft</strong> in Thomas's Superhuman, addressed to the prospect, never sent by the agent.</li></ol>
+<p>Two rules never bend. The agent never sends an email, and it never publishes a page unless someone writes <strong>publish</strong> in the thread. Everything it produces stays private until a person acts.</p>
+<blockquote>Current status: pilot. The first real calls run through it in September 2026. If something looks wrong, say so in the thread; the agent answers there.</blockquote>
+<h1 id="who-does-what">Who does what</h1>
+<div class="tablewrap"><table><thead><tr><th>Step</th><th>Who</th></tr></thead><tbody><tr><td>Take the call, with recording on</td><td>The rep (Thomas)</td></tr><tr><td>Start the follow-up in Slack</td><td>Thomas or Douceline</td></tr><tr><td>Answer the agent's questions</td><td>Whoever knows the answer, usually Thomas</td></tr><tr><td>Say <strong>go</strong> when the brief is right</td><td>Thomas or Douceline</td></tr><tr><td>Paste the prompt into Distribute and let Dante build the page</td><td>Thomas or Douceline</td></tr><tr><td>Check the page, fix spellings, put the link in the email draft</td><td>The agent</td></tr><tr><td>Read the email and send it</td><td>The rep, from his own mailbox</td></tr><tr><td>Say <strong>publish</strong></td><td>Thomas or Douceline</td></tr></tbody></table></div>
+<h1 id="step-by-step">Step by step</h1>
+<h2 id="1-start-a-follow-up">1. Start a follow-up</h2>
+<p>In #follow-up_channel, as a new message, write something like:</p>
+<blockquote>Follow-up Agent: follow up on the demo with Company X of 16 September.</blockquote>
+<p>If you do not remember the exact call, ask:</p>
+<blockquote>Follow-up Agent: which external meetings did we have this week?</blockquote>
+<p>The agent lists them, numbered. Reply with the number.</p>
+<h2 id="2-read-the-opening-message">2. Read the opening message</h2>
+<p>Within a minute or two the agent opens a thread with:</p>
+<ul><li>the call: date, attendees and their roles, which recorder captured it</li><li>the HubSpot deal, with a link</li><li>what kind of call it was and what kind of message the follow-up should be</li><li>a link to the <strong>canvas</strong>, where the full brief lives</li><li>up to five numbered questions</li></ul>
+<p>Everything from here on happens <strong>inside that thread</strong>. Use "Reply in thread", not a new message in the channel.</p>
+<h2 id="3-answer-the-questions">3. Answer the questions</h2>
+<p>Answer in plain text or with a voice note, in any order. Typical questions: which price to quote and for what period, which reference customers may be named, what to answer on hosting, which dates to offer for the next call, whether a promised video exists yet.</p>
+<p>After each answer the agent updates the canvas and tells you the new version number and what is still open. You can also correct it: "the company is spelled X", "drop the video", "add that they asked about integration".</p>
+<p>When something is not known yet, tell the agent to keep it as a <strong>placeholder</strong>. It stays visible on the page as "to be added" until someone fills it.</p>
+<h2 id="4-say-go">4. Say go</h2>
+<p>When the brief reads right, write <strong>go</strong> on its own line. Thomas or Douceline can do this. The agent then:</p>
+<ul><li>freezes the brief in the canvas</li><li>posts the <strong>Dante prompt</strong>: one block of text you can copy</li><li>creates the email draft in Thomas's Superhuman, with "page link follows" where the link will go</li></ul>
+<h2 id="5-build-the-page-in-distribute">5. Build the page in Distribute</h2>
+<ol><li>Open Distribute (app.distribute.so, or the desktop app), Home.</li><li>Click the Dante box: "Ask about your calls, accounts, and content, or ask me to create a page".</li><li>Paste the prompt from Slack. Send.</li><li>Wait for Dante to finish. The page appears as a <strong>private draft</strong> in the Prospects folder, titled "Q7Leader x Company".</li><li>Read it once. If a fact is wrong, tell the agent in the thread or fix it directly in the editor.</li></ol>
+<p>Do not publish yet.</p>
+<h2 id="6-the-agent-finishes">6. The agent finishes</h2>
+<p>The agent notices the new page, checks names, numbers and quotes against the recording and HubSpot, adds the prospect's banner, puts the editor link into the email draft, and posts the <strong>handover</strong> in the thread:</p>
+<ul><li>the email text</li><li>the link to the page editor</li><li>the HubSpot deal link</li><li>what is still to add before sending, with an owner per item</li></ul>
+<h2 id="7-publish-and-send">7. Publish and send</h2>
+<p>When the page is final, write <strong>publish</strong> in the thread, or publish from the Distribute editor. The agent swaps the public link into the email draft. Thomas opens Superhuman, reads the draft, changes what he wants, and sends. That last step is always a person.</p>
+<h1 id="getting-into-distribute">Getting into Distribute</h1>
+<p>Douceline needs a Distribute account in the Q7Leader workspace.</p>
+<ol><li><strong>Invitation.</strong> Thomas invites you: Distribute, Workspace settings, Members, Invite. You receive an email from Distribute.</li><li><strong>Sign in.</strong> Open app.distribute.so and choose "Continue with Google" with your q7leader.com address. No separate password.</li><li><strong>Workspace.</strong> Bottom left should say "Q7Leader Workspace". If it shows something else, click it and switch.</li><li><strong>Folders.</strong> You should see Prospects, Customer Pages and the shared folders. If Prospects is missing, ask Thomas to share it.</li><li><strong>Desktop app, optional.</strong> Download from app.distribute.so/download. It is the same application in a window, plus a call recorder. If macOS says the app cannot be opened, the file went through a chat app on the way; download it again directly in the browser.</li></ol>
+<p>What you never do in Distribute for this workflow: send an email from Dante's Gmail connection, or publish a page nobody asked to publish.</p>
+<h1 id="where-things-live">Where things live</h1>
+<ul><li><strong>Slack thread:</strong> the conversation, one per call.</li><li><strong>Slack canvas:</strong> the brief, the Dante prompt, the open questions, the placeholders, the outputs. Linked from the thread's first message.</li><li><strong>Distribute:</strong> the page, private until published.</li><li><strong>Superhuman:</strong> the email draft, in Thomas's account.</li><li><strong>HubSpot:</strong> the deal, unchanged by the agent unless someone ticks a proposal in the thread.</li></ul>
+<h1 id="faq">FAQ</h1>
+<p><strong>Do I need Slack, Distribute and Superhuman?</strong> Slack always. Distribute only for step 5. Superhuman never; the draft sits in Thomas's account and he sends.</p>
+<p><strong>The agent did not react to my message.</strong> Check that you wrote inside the thread, not in the channel. Then check that it is you writing: the agent answers Thomas and Douceline only. If it is still silent after two minutes, write "Follow-up Agent, are you there?" and tell Thomas if nothing comes back.</p>
+<p><strong>Can I answer with a voice note?</strong> Yes. Record it in Slack, in the thread. The agent transcribes it and quotes the parts it used.</p>
+<p><strong>The agent asked a question I cannot answer.</strong> Say so: "Thomas has to answer question 3". It stays open and the canvas shows who owns it.</p>
+<p><strong>Who is allowed to say go and publish?</strong> Thomas and Douceline. Nobody else, and the agent ignores those words from anyone else.</p>
+<p><strong>Can the page be changed after the handover?</strong> Yes, in the Distribute editor, by anyone with access. If the email has already gone out and you change a price or a date, tell Thomas, because the email and the page then say different things.</p>
+<p><strong>The page has "to be added" blocks on it. Is that a mistake?</strong> No. It means no source supported that part and nobody filled it in. Fill it in the editor, or ask the agent to drop it.</p>
+<p><strong>Dante wrote something that was not said on the call.</strong> Tell the agent in the thread. It checks every fact about the prospect against the recording, but Dante's own additions about Q7Leader are allowed. If a prospect fact is wrong, the agent fixes it or tells you what to change.</p>
+<p><strong>The company name is misspelled.</strong> The agent takes spellings from HubSpot and from the prospect's email signature. Tell it the right spelling; the canvas, the prompt and the page get corrected.</p>
+<p><strong>What if the call is not in Distribute?</strong> Dante needs the recording to be in Distribute's call library. Calls recorded by the Distribute recorder, Fathom or Granola appear there when those connections are on. If a call is missing, tell the agent; it can write the brief from the transcript it read itself and hand you a longer prompt.</p>
+<p><strong>Will the agent ever email the prospect?</strong> No. It has no sending tool. It creates drafts only.</p>
+<p><strong>Something went wrong and I want to undo.</strong> Pages: Distribute keeps an undo for a week for anything the agent created. Emails: nothing was sent, delete the draft. Canvas: earlier versions are listed in the canvas status line; ask the agent to restore one.</p>
+<p><strong>Where do I report a problem?</strong> In the thread, or to Thomas directly. Say what you expected and what happened.</p>
+<footer>Agent Hub · built 2026-09-20 · <a href="../index.html">all agents</a></footer>
+</div>
+</body>
+</html>

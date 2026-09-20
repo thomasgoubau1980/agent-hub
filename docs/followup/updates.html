@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Kara · User guide</title>
+<title>Follow-up Agent · Release notes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
 <style>
 :root {
   --paper:#FAFAF7; --panel:#F1F2EE; --ink:#1C2530; --ink-soft:#4C5866;
-  --line:#D8DCD9; --accent:#01977C; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
+  --line:#D8DCD9; --accent:#B4531E; --accent-ink:#FFFFFF; --code-bg:#ECEEE9;
   --surface:#FFFFFF; --sink:#EEF1EC; --ink55:#4C5866;
   --green:#01977C; --green-soft:#D6F2EA; --blue:#2289E8; --blue-soft:#E4F1FE;
   --alert:#F2554C; --shadow:0 10px 30px rgba(20,22,26,0.08);
 }
 @media (prefers-color-scheme: dark) { :root {
   --paper:#14181F; --panel:#1B212B; --ink:#D9DEE5; --ink-soft:#97A2B0;
-  --line:#2C3441; --accent:#5FCDB4; --accent-ink:#0F1420; --code-bg:#202734;
+  --line:#2C3441; --accent:#F0A26B; --accent-ink:#0F1420; --code-bg:#202734;
   --surface:#1B212B; --sink:#161B23; --ink55:#97A2B0;
   --green:#5FCDB4; --green-soft:#173029; --blue:#7FB8F0; --blue-soft:#182636;
   --alert:#E08A7A; --shadow:0 10px 30px rgba(0,0,0,0.35);
@@ -117,42 +117,30 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 </style>
 </head>
 <body>
-<nav class="nav"><a href="../index.html">AGENT HUB</a><a href="index.html" class="on">GUIDE</a><a href="updates.html" class="">RELEASE NOTES</a></nav>
+<nav class="nav"><a href="../index.html">AGENT HUB</a><a href="index.html" class="">GUIDE</a><a href="updates.html" class="on">RELEASE NOTES</a></nav>
 <div class="wrap">
 
 <header class="masthead">
-  <span class="eyebrow">Kara · User guide</span>
-  <h1>Kara</h1>
-  <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork.</p>
-  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: GTD workflow v2</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
+  <span class="eyebrow">Follow-up Agent · Release notes</span>
+  <h1>What shipped</h1>
+  <p class="lede">Turns a recorded sales call into a validated brief, a Distribute follow-up page and an unsent email draft, in one Slack thread. Never sends anything itself. Newest first.</p>
+  <div class="strip"><span class="badge acc">pilot</span><span class="badge">latest: "0.1" · 20 September 2026</span><a class="badge" href="index.html" style="text-decoration:none">user guide →</a></div>
 </header>
-<h1 id="what-kara-is">What Kara is</h1>
-<p>Kara is a working system, not a single app. It answers one question all day: what should I be doing right now? Four parts share the work, and each one does only what it is best at:</p>
-<div class="tablewrap"><table><thead><tr><th>Part</th><th>Job</th><th>You use it for</th></tr></thead><tbody><tr><td><strong>Todoist</strong></td><td>Captures everything</td><td>Getting things out of your head, fast, from anywhere</td></tr><tr><td><strong>Akiflow</strong></td><td>Plans the week and the day</td><td>Picking priorities, time blocking, the planning rituals</td></tr><tr><td><strong>Kara app</strong> (Mac, iPhone, iPad)</td><td>Runs the day</td><td>Meetings, the tasks they produce, today's plan in one view</td></tr><tr><td><strong>Kara agent</strong></td><td>Works in the background</td><td>Turning meetings and mail into tasks, enriching and tagging captures</td></tr></tbody></table></div>
-<p>Underneath, tasks live in Todoist and time lives in Google Calendar. Akiflow and the Kara app are windows onto those two, so nothing you do in one place gets lost in another.</p>
-<h1 id="capture-everything-goes-to-todoist">Capture: everything goes to Todoist</h1>
-<p>Never keep a task in your head or park it in a notes app. Say it, type it, or forward it into Todoist, unsorted is fine. The Inbox is allowed to be messy because clean-up is not your job:</p>
-<ul><li>The <strong>sweep</strong> runs three times a day and turns your meetings, mail, and Slack into suggested tasks, each with a note on where it came from and why.</li><li>The <strong>enrichment pass</strong> runs hourly on the Inbox. Every capture gets: a summary of any link it contains (the agent reads the page for you), a nature tag, and a proposed project written into the description.</li></ul>
-<p>You never have to open a link to know whether a task deserves your time.</p>
-<h1 id="the-three-tags">The three tags</h1>
-<p>The agent tags every Inbox task. Two describe what kind of work it is, one nominates it for your attention:</p>
-<div class="tablewrap"><table><thead><tr><th>Tag</th><th>Meaning</th><th>Rule the agent applies</th></tr></thead><tbody><tr><td><code>focus</code></td><td>Deep work</td><td>Needs 25 minutes or more of uninterrupted work by you: writing, analysis, preparation, review. Belongs inside a 90-minute Focus block.</td></tr><tr><td><code>admin</code></td><td>Small stuff</td><td>15 minutes or less: pay, book, confirm, forward, chase. Several of these get batched into one Admin block.</td></tr><tr><td><code>key</code></td><td>Top-3 candidate</td><td>A nomination only, and rare: a hard deadline within 48 hours, direct revenue or customer impact, or it unblocks someone else. At most three per day.</td></tr></tbody></table></div>
-<p>Every task is either focus or admin. <code>key</code> comes on top and is deliberately strict: if everything is key, nothing is. The agent only nominates; choosing the actual top 3 of the day is yours, every morning, in Akiflow.</p>
-<h1 id="the-daily-routine">The daily routine</h1>
-<p><strong>Morning, in Akiflow (5 to 10 minutes).</strong> Run the Daily Planning ritual:</p>
-<ol><li>Glance at yesterday: anything unfinished moves forward or gets dropped consciously.</li><li>Pick your 1 to 3 <strong>Goals</strong> for today (press H on a task). The agent's <code>key</code> nominations are your shortlist, but the choice is yours.</li><li>Clear the inbox: every task gets a when (today, a day this week, the weekly bucket, someday) or gets deleted. The agent's summary and proposed project in each description mean you rarely need to open anything.</li><li>Block the day: drag focus tasks into a 90-minute Focus block, let the small stuff collect in the Admin block.</li></ol>
-<p><strong>During the day, in the Kara app.</strong> This is your landing page: today's meetings at real scale, the tasks inside each block, and new tasks appearing as meetings finish. Capture anything new straight into Todoist and keep going.</p>
-<p><strong>Closing, in the Kara app.</strong> Give every leftover a destination: done, tomorrow, a project, waiting-for, or consciously kept open. Two minutes, and tomorrow starts clean.</p>
-<h1 id="the-weekly-routine">The weekly routine</h1>
-<p><strong>Friday afternoon, in Akiflow.</strong> Plan the coming week:</p>
-<ol><li>Review this week: what shipped, what slipped, what should stop.</li><li>Pull next week's work from the weekly bucket and your projects, and give the important items a day.</li><li>Lay in the recurring structure: Focus blocks on your best hours, the Admin block, and leave slack. A plan that fills every hour fails by Tuesday.</li></ol>
-<p>Projects and areas themselves are reviewed in Todoist, where they mirror your PARA filing. Akiflow deliberately keeps almost no projects of its own: it is about when, not where.</p>
-<h1 id="time-blocks">Time blocks</h1>
-<ul><li><strong>Focus block:</strong> 90 minutes, one to two <code>focus</code> tasks, no meetings, no inbox. Protect at least one per day.</li><li><strong>Admin block:</strong> 30 to 45 minutes, recurring, eats the <code>admin</code> tasks in batch. One good admin block beats admin scattered through the day.</li><li>Blocks you create in Akiflow appear on your Google Calendar, so the Kara app and everyone who sees your availability respects them.</li></ul>
-<h1 id="waiting-on-other-people">Waiting on other people</h1>
-<p>Delegated and waiting-for items get a digest every Monday and Friday morning so nothing you handed off silently dies.</p>
-<h1 id="good-to-know">Good to know</h1>
-<ul><li><strong>Tags stay in Todoist.</strong> Akiflow shows each task's summary and proposed project (in the description) but not the labels. Your triage information is in the text.</li><li><strong>Only new activity syncs.</strong> Tasks created or edited after the Todoist-Akiflow connection flow across; old untouched tasks stay where they are until you touch them.</li><li><strong>Deleting in Akiflow never deletes in Todoist.</strong> Complete or reject instead of deleting when it matters.</li><li><strong>One scheduler per space.</strong> Akiflow owns work blocks. If another tool also auto-blocks your calendar, give it a separate lane (personal habits, for example) or the two will fight over the same free hours.</li></ul>
+
+<section class="rel" id="-0.1-">
+  <div class="sec-num"><b>"0.1"</b> · 20 SEP 2026</div>
+  <h2>"A follow-up page and email draft from one Slack thread, without anyone writing from memory"</h2>
+  <p class="sec-sub">After a sales call, start a thread in #follow-up_channel and the agent does the reading: the recording, the email thread with the attendees, the HubSpot deal. It asks the few questions only a person can answer, keeps the brief in a canvas, and on the word <strong>go</strong> hands you a prompt for Dante in Distribute plus an email draft waiting in Superhuman. Nothing is sent or published by the agent.</p>
+  
+  <p>&lt;!-- screenshot: the Slack thread opening message with the canvas link and the five questions --&gt;</p>
+<p>Known limits in this version: the agent cannot create the page inside the Distribute app itself, so step 5 in the guide is a human paste; calls that live only in Granola or Fathom need Distribute's connection to those tools to be switched on before Dante can read them; HubSpot is read only, proposals for notes and tasks are posted in the thread for a tick.</p>
+  <div class="notes"><div class="note"><b>One thread per call.</b><span>Everything about a follow-up lives in one Slack thread and its canvas, so Thomas can start it on the phone and Douceline can finish it at her desk.</span></div>
+<div class="note"><b>Questions, not guesses.</b><span>Prices, references, hosting answers and dates come from you. Anything nobody confirms stays a visible placeholder on the page rather than an invented sentence.</span></div>
+<div class="note"><b>Dante builds the page from the real transcript.</b><span>The agent writes the prompt, you paste it into Distribute, the page appears as a private draft in the Prospects folder.</span></div>
+<div class="note"><b>The email is a draft, always.</b><span>It sits in Thomas's Superhuman as a reply on the prospect's own thread, with the page link added once the page exists.</span></div>
+<div class="note"><b>Spellings from the CRM.</b><span>Company and people names come from HubSpot and email signatures, never from what the transcript thought it heard.</span></div>
+<div class="note"><b>Voice notes work.</b><span>Answer in the thread by voice; the agent transcribes and quotes what it used.</span></div></div>
+</section>
 <footer>Agent Hub · built 2026-09-20 · <a href="../index.html">all agents</a></footer>
 </div>
 </body>

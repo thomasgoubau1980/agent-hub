@@ -1,0 +1,6 @@
+name: Follow-up Agent
+tagline: Turns a recorded sales call into a validated brief, a Distribute follow-up page and an unsent email draft, in one Slack thread. Never sends anything itself.
+accent: "#B4531E"
+accent_dark: "#F0A26B"
+status: pilot
+order: 3
