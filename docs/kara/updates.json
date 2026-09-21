@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "iPhone & iPad build 24",
+    "date": "2026-09-21",
+    "title": "The Day Companion arrives on iPhone and iPad",
+    "url": "./kara/updates.html#iphone-ipad-build-24"
+  },
+  {
+    "agent": "kara",
     "version": "0.3.0",
     "date": "2026-09-20",
     "title": "Kara is now your day companion: one lane for the day, one tap to triage",
