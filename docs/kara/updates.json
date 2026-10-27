@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.1",
+    "date": "2026-10-27",
+    "title": "Kara reads your Akiflow plan, keeps notes on each meeting, and listens",
+    "url": "./kara/updates.html#v0.4.0-beta.1"
+  },
+  {
+    "agent": "kara",
     "version": "iPhone & iPad build 24",
     "date": "2026-09-21",
     "title": "The Day Companion arrives on iPhone and iPad",

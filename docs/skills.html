@@ -123,8 +123,8 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <header class="masthead">
   <span class="eyebrow">Fleet · Skills reference</span>
   <h1>Every skill, in plain English</h1>
-  <p class="lede">All 63 skills in the <a href="https://github.com/thomasgoubau1980/personal-agent-skills">personal-agent-skills</a> catalog: what each one is for and which agents carry it. Regenerated on every hub publish, so this never goes stale.</p>
-  <div class="filter"><input id="q" type="search" placeholder="Filter by name or purpose..." aria-label="Filter skills"> <span class="count" id="n">63 skills</span></div>
+  <p class="lede">All 64 skills in the <a href="https://github.com/thomasgoubau1980/personal-agent-skills">personal-agent-skills</a> catalog: what each one is for and which agents carry it. Regenerated on every hub publish, so this never goes stale.</p>
+  <div class="filter"><input id="q" type="search" placeholder="Filter by name or purpose..." aria-label="Filter skills"> <span class="count" id="n">64 skills</span></div>
 </header>
 <div class="tablewrap"><table class="skills">
 <thead><tr><th>Skill</th><th>What it is for</th><th>Deployed to</th></tr></thead>
@@ -381,6 +381,10 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/weekly-signal-diff">weekly-signal-diff</a></td>
 <td>Reviews a defined set of inputs on a cadence and reports only what changed since last time.</td>
 <td><span class="surf">claude</span><span class="surf">codex</span><span class="surf">grok</span><span class="surf">oracle</span></td></tr>
+<tr data-k="work-notion-task execute a specific notion task requested by a human, save draft deliverables under its project or area, append a work log, and hand over for human review.">
+<td><a href="https://github.com/thomasgoubau1980/personal-agent-skills/tree/main/skills/work-notion-task">work-notion-task</a></td>
+<td>Execute a specific Notion task requested by a human, save draft deliverables under its Project or Area, append a work log, and hand over for human review.</td>
+<td><span class="surf">codex</span></td></tr>
 </tbody></table></div>
 <script>
 const q=document.getElementById("q"),n=document.getElementById("n"),rs=[...document.querySelectorAll("#rows tr")];
@@ -388,7 +392,7 @@ q.addEventListener("input",()=>{const v=q.value.toLowerCase().trim();let c=0;
 for(const r of rs){const hit=!v||r.dataset.k.includes(v);r.style.display=hit?"":"none";if(hit)c++;}
 n.textContent=c+" skill"+(c===1?"":"s");});
 </script>
-<footer>Agent Hub · built 2026-09-21 · <a href="./index.html">all agents</a></footer>
+<footer>Agent Hub · built 2026-10-27 · <a href="./index.html">all agents</a></footer>
 </div>
 </body>
 </html>

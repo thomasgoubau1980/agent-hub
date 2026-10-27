@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21",
+  "generated": "2026-10-27",
   "catalog": "github.com/thomasgoubau1980/personal-agent-skills",
   "surfaceLabels": {
     "claude-code": "Claude Code",
@@ -742,6 +742,14 @@
         "codex",
         "grok",
         "oracle"
+      ]
+    },
+    {
+      "name": "work-notion-task",
+      "purpose": "Execute a specific Notion task requested by a human, save draft deliverables under its Project or Area, append a work log, and hand over for human review.",
+      "curated": false,
+      "surfaces": [
+        "codex"
       ]
     }
   ]
