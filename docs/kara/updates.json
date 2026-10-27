@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.4",
+    "date": "2026-10-27",
+    "title": "Three views of your day, and a morning Review for today's 3",
+    "url": "./kara/updates.html#v0.4.0-beta.4"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.3",
     "date": "2026-10-27",
     "title": "A calmer Today: hide what you don't need to see",
