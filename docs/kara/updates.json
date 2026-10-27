@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.6",
+    "date": "2026-10-27",
+    "title": "Open a task's subtasks where you are, and zoom in to work on it",
+    "url": "./kara/updates.html#v0.4.0-beta.6"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.5",
     "date": "2026-10-27",
     "title": "Your Akiflow tasks stay in their blocks, and you can finish them from the Day view",
