@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.5",
+    "date": "2026-10-27",
+    "title": "Your Akiflow tasks stay in their blocks, and you can finish them from the Day view",
+    "url": "./kara/updates.html#v0.4.0-beta.5"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.4",
     "date": "2026-10-27",
     "title": "Three views of your day, and a morning Review for today's 3",
