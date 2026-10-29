@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.14",
+    "date": "2026-10-29",
+    "title": "The focus timer ticks again",
+    "url": "./kara/updates.html#v0.4.0-beta.14"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.13",
     "date": "2026-10-29",
     "title": "Akiflow tasks show once on Today, not twice",
