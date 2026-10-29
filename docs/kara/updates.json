@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.12",
+    "date": "2026-10-29",
+    "title": "One paper for the day, from a few words to a whole briefing",
+    "url": "./kara/updates.html#v0.4.0-beta.12"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.11",
     "date": "2026-10-28",
     "title": "A scrap paper for the day, one keystroke away",
