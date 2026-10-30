@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.15",
+    "date": "2026-10-30",
+    "title": "Read back any past day, and add notes to it",
+    "url": "./kara/updates.html#v0.4.0-beta.15"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.14",
     "date": "2026-10-29",
     "title": "The focus timer ticks again",
