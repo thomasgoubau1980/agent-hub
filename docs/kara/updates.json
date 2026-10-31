@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.16",
+    "date": "2026-10-31",
+    "title": "Your projects and their next actions, on one list",
+    "url": "./kara/updates.html#v0.4.0-beta.16"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.15",
     "date": "2026-10-30",
     "title": "Read back any past day, and add notes to it",

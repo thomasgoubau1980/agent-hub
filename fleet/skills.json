@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30",
+  "generated": "2026-10-31",
   "catalog": "github.com/thomasgoubau1980/personal-agent-skills",
   "surfaceLabels": {
     "claude-code": "Claude Code",
@@ -17,13 +17,10 @@
       "purpose": "Publishes and updates every agent's user guide and release notes on this hub, screenshots included.",
       "curated": true,
       "surfaces": [
-        "brian",
         "claude-code",
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -37,8 +34,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -73,8 +68,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -174,8 +167,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -186,7 +177,6 @@
       "surfaces": [
         "claude-code",
         "grok",
-        "openclaw",
         "oracle"
       ]
     },
@@ -197,7 +187,6 @@
       "surfaces": [
         "claude-code",
         "grok",
-        "openclaw",
         "oracle"
       ]
     },
@@ -248,13 +237,10 @@
       "purpose": "The ship-time closeout of a feature: tests verified on the real build, screenshots taken, docs published to the hub, announcement material generated, Ship Card written.",
       "curated": true,
       "surfaces": [
-        "brian",
         "claude-code",
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -274,13 +260,10 @@
       "purpose": "The pre-development gate: press release, user tests, release-note draft, guide updates and marketing pack, all before one line of code.",
       "curated": true,
       "surfaces": [
-        "brian",
         "claude-code",
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -377,7 +360,6 @@
       "surfaces": [
         "claude-code",
         "grok",
-        "openclaw",
         "oracle"
       ]
     },
@@ -410,7 +392,6 @@
       "surfaces": [
         "claude-code",
         "grok",
-        "openclaw",
         "oracle"
       ]
     },
@@ -464,8 +445,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -500,8 +479,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -514,8 +491,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -551,8 +526,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -610,8 +583,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -636,8 +607,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -670,8 +639,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
@@ -706,8 +673,6 @@
         "codex",
         "grok",
         "hermes",
-        "openclaw",
-        "openglow",
         "oracle"
       ]
     },
