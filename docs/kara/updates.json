@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.21",
+    "date": "2026-11-01",
+    "title": "Next actions reach Notion, each on its own project",
+    "url": "./kara/updates.html#v0.4.0-beta.21"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.20",
     "date": "2026-11-01",
     "title": "Your Notion projects load again",
