@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.20",
+    "date": "2026-11-01",
+    "title": "Your Notion projects load again",
+    "url": "./kara/updates.html#v0.4.0-beta.20"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.19",
     "date": "2026-11-01",
     "title": "Kara tells you when Notion is signed in to the wrong workspace",
