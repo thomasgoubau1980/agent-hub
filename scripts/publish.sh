@@ -22,6 +22,13 @@ if [ -d "$KARA_SRC" ]; then
   rsync -a --exclude "README.md" "$KARA_SRC/" "agents/kara/updates/"
 fi
 
+# Kara's user guide is authored in kara-desktop too: the app shows the same
+# file in Settings > User guide, so the hub mirrors it rather than editing here.
+KARA_GUIDE="$HOME/Developer/kara-desktop/docs/guide/kara-guide.md"
+if [ -f "$KARA_GUIDE" ]; then
+  cp "$KARA_GUIDE" "agents/kara/guide/index.md"
+fi
+
 # Refresh the skills reference from the catalog repo when it is checked out.
 if [ -d "$HOME/Developer/personal-agent-skills/skills" ]; then
   node scripts/sync-skills.mjs
