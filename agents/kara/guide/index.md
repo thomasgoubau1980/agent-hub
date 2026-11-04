@@ -1,74 +1,102 @@
 # What Kara is
 
-Kara is a working system, not a single app. It answers one question all day: what should I be doing right now? Four parts share the work, and each one does only what it is best at:
+Kara is your day companion on the Mac. It answers one question all day: what should I be doing right now, and where does this thought go? It doesn't replace your other tools. Each tool keeps one job:
 
-| Part | Job | You use it for |
-|---|---|---|
-| **Todoist** | Captures everything | Getting things out of your head, fast, from anywhere |
-| **Akiflow** | Plans the week and the day | Picking priorities, time blocking, the planning rituals |
-| **Kara app** (Mac, iPhone, iPad) | Runs the day | The one screen you live in between meetings: your blocks, your meetings and what they produce |
-| **Kara agent** | Works in the background | Turning meetings and mail into tasks, enriching and tagging captures |
+- **Akiflow** holds your plan and all of your own tasks.
+- **Notion** (your private workspace) holds your projects, their next actions and your notes.
+- **Google Calendar** holds your time.
+- **Todoist** holds your team's actions and the suggestions Kara finds for you.
+- **Kara** is the one screen you live in between meetings: today's plan, your meetings and what they produce, your projects, and the reviews.
 
-Underneath, tasks live in Todoist and time lives in Google Calendar. Akiflow and the Kara app are windows onto those two, so nothing you do in one place gets lost in another.
+Behind the app, the Kara agent reads your meetings and mail three times a day (09:30, 13:30 and 17:30) and suggests tasks from them.
 
-# Capture: everything goes to Todoist
+# Getting set up
 
-Never keep a task in your head or park it in a notes app. Say it, type it, or forward it into Todoist, unsorted is fine. The Inbox is allowed to be messy because clean-up is not your job:
+Open **Settings** and connect, once per Mac:
 
-- The **sweep** runs three times a day and turns your meetings, mail, and Slack into suggested tasks, each with a note on where it came from and why.
-- The **enrichment pass** runs hourly on the Inbox. Every capture gets: a summary of any link it contains (the agent reads the page for you), a nature tag, and a proposed project written into the description.
+1. **Akiflow.** Today then shows your Akiflow blocks with their tasks, and everything you write as a task lands in your Akiflow Inbox.
+2. **Notion.** Sign in with the account that holds your projects. Projects, project pages and notes then work.
+3. **Google Calendar** for your meetings, and **Todoist** for the team's actions and Kara's suggestions.
 
-You never have to open a link to know whether a task deserves your time.
+The bottom of the sidebar shows each connection: green when it works, the time it last read, or "error" with the reason when you hover.
 
-# The three tags
+# Today
 
-The agent tags every Inbox task. Two describe what kind of work it is, one nominates it for your attention:
+Today is where Kara opens. The header switches between three views:
 
-| Tag | Meaning | Rule the agent applies |
-|---|---|---|
-| `focus` | Deep work | Needs 25 minutes or more of uninterrupted work by you: writing, analysis, preparation, review. Belongs inside a 90-minute Focus block. |
-| `admin` | Small stuff | 15 minutes or less: pay, book, confirm, forward, chase. Several of these get batched into one Admin block. |
-| `key` | Top-3 candidate | A nomination only, and rare: a hard deadline within 48 hours, direct revenue or customer impact, or it unblocks someone else. At most three per day. |
+- **Schedule**: the list of your day, opened at the current hour.
+- **Day**: the day on a time grid, each block as long as it really is.
+- **Notes**: the whole day as one notebook page, item by item.
 
-Every task is either focus or admin. `key` comes on top and is deliberately strict: if everything is key, nothing is. The agent only nominates; choosing the actual top 3 of the day is yours, every morning, in Akiflow.
+Your Akiflow blocks show the tasks planned inside them. Tick a task to finish it in Akiflow, press play to start a focus timer on it, or use its arrow to open it in the Akiflow app. **Today's 3** sit at the top of the right-hand column. **Show**, next to Capture, decides what Today shows: declined meetings, skipped meetings, done tasks, and what you hid.
 
-# The daily routine
+# Writing: the paper
 
-**Morning, in Akiflow (5 to 10 minutes).** Run the Daily Planning ritual:
+Every free text in Kara is a paper, and the same line rules work everywhere:
 
-1. Glance at yesterday: anything unfinished moves forward or gets dropped consciously.
-2. Pick your 1 to 3 **Goals** for today (press H on a task). The agent's `key` nominations are your shortlist, but the choice is yours.
-3. Clear the inbox: every task gets a when (today, a day this week, the weekly bucket, someday) or gets deleted. The agent's summary and proposed project in each description mean you rarely need to open anything.
-4. Block the day: drag focus tasks into a 90-minute Focus block, let the small stuff collect in the Admin block.
+- A plain line is a note.
+- A line starting with "+ " is a task. On today's paper it goes to your Akiflow Inbox; on a project's note, or a meeting that belongs to a project, it becomes that project's next action.
+- "@name" is something you wait on from someone.
+- "! " is a decision.
+- "# " and "## " are headings; they build the outline on the side.
 
-**During the day, in the Kara app.** Today is one time-ordered lane: your Akiflow blocks with their tasks, your meetings, and the NOW line. When a meeting ends, its summary and the tasks Kara extracted appear under the meeting card. Triage them where the context is, with three verbs: **Keep** (to Todoist, planned in Akiflow tomorrow), **Reject** (closed, with undo), **Reference** (filed to the Library). A notes rail keeps the day's scribbles; they sync everywhere and come back at Closing. The Triage surface holds everything not tied to a meeting (mail, Slack).
+Press **⌘J**, or **Write** at the top of the sidebar, on any screen. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a **Page** beside Today, or **Full** for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. The mic on the paper adds what you say as a new line.
 
-**Closing, in the Kara app.** Press Close the day: today's priorities, the kept meeting actions still open, and anything else chosen for today each get one of **Done**, **Tomorrow** (stays chosen for tomorrow) or **Plan later** (back to the pool for tomorrow's Akiflow planning). Write the note for tomorrow; it opens the next morning's Today. Two minutes, and the day is closed.
+A line is handed on once, when you press Enter at its end or hide the paper, so nothing is sent twice. Every note is also saved to the Notes database in your Notion a few seconds after you stop typing. A note you made can be deleted, with Undo for 8 seconds; its Notion copy goes to Notion's trash.
 
-# The weekly routine
+# Meetings
 
-**Friday afternoon, in Akiflow.** Plan the coming week:
+The live meeting's notes are a tab on the paper. **Meeting mode** (the button on the live meeting card, or ⌃⌥M from any app) shrinks Kara to a narrow window beside the call, kept on top.
 
-1. Review this week: what shipped, what slipped, what should stop.
-2. Pull next week's work from the weekly bucket and your projects, and give the important items a day.
-3. Lay in the recurring structure: Focus blocks on your best hours, the Admin block, and leave slack. A plan that fills every hour fails by Tuesday.
+Every meeting has a **+ Project** chip. Put a meeting on a project once, and Kara asks whether the next meetings in the series keep it. Its notes then show on the project's page, and its "+ " lines become that project's next actions.
 
-Projects and areas themselves are reviewed in Todoist, where they mirror your PARA filing. Akiflow deliberately keeps almost no projects of its own: it is about when, not where.
+After the meeting, its details show the Fathom or Granola summary, your tasks, the decision, your notes and a link to the recording.
 
-# Time blocks
+# Projects
 
-- **Focus block:** 90 minutes, one to two `focus` tasks, no meetings, no inbox. Protect at least one per day.
-- **Admin block:** 30 to 45 minutes, recurring, eats the `admin` tasks in batch. One good admin block beats admin scattered through the day.
-- Blocks you create in Akiflow appear on your Google Calendar, so the Kara app and everyone who sees your availability respects them.
+**Projects** in the sidebar shows every active project from your Notion as a card with its next actions.
 
-# Waiting on other people
+- **Add a next action** by typing under a project and pressing Enter. It is saved in Notion with the project's code (for example "[BRD] Send the pre-read"), reaches your Akiflow Inbox within a few minutes, and Kara files it under the matching Akiflow project. A small "to Akiflow" dot shows until it has arrived.
+- **Tick it off** here or in Akiflow: it is done in both.
+- **Later, Done or Drop** from the ••• on a project. Later projects fold at the bottom.
+- **+ New project** needs only a name. Kara makes the code and creates it in Notion. If Akiflow has no project with that name yet, Kara tells you once, with a "Copy name" button.
 
-Delegated and waiting-for items get a digest every Monday and Friday morning so nothing you handed off silently dies.
+## A project's page
+
+Click a project's name to open its page:
+
+- **Description**: a few lines on what the project is and why it matters. Write it right there; it is saved in the project's Objective field in Notion.
+- **Done when**: what finished looks like, in one sentence.
+- **Next actions** and **Waiting for** (the "@name" lines in the project's notes).
+- **Notes**, newest first, including the notes of its meetings. "+ New note" starts one.
+- **Linked**, on the right: decks, documents and chats that belong to the project in Notion. Paste a link to add one; hide the panel in one click.
+
+## Project codes
+
+Every project has a short code of three or four capitals, and every action's title starts with it. Akiflow brings actions over from Notion without their project, so the code is how Kara keeps Notion and Akiflow in step. Keep the code when you edit a title.
+
+# Review
+
+**Review** is the start and the end of the day.
+
+- **Start the day** (mornings): last night's note, then today's 3. Kara suggests three with a reason. Pick, swap, or type a new one; Kara creates it in Akiflow, planned today, and tags it "today".
+- **Close the day** (after noon): the open loops, then the plain lines still on today's paper, each to Task, Keep (to the top of tomorrow's paper) or Toss, then three journal questions.
+
+# Days
+
+**Days** reads back any past day; "‹ Yesterday" on Today gets you there too. Move with ‹ ›, the arrow keys or the week strip. Each day shows its paper and pages, the meetings you were in with their summaries, team meetings, what you finished and what you didn't, Kara's suggestions, and how each of today's 3 ended. You can still add a note to a past day or meeting.
+
+# Triage
+
+**Triage** is the one queue of what Kara suggests from your meetings, mail and Slack. Three choices for each: **Keep** sends it to your Akiflow Inbox, **Reference** files it, **Reject** drops it (with Undo). Kara never asks when; that is planning, and planning happens in Akiflow.
+
+# Timer
+
+**Timer** runs a focus session on one task, with an optional sound. Start it from the play button on any task in Today.
 
 # Good to know
 
-- **The Kara app has four surfaces**: Today, Triage, Timer, Profile. Projects, reviews and planning are not hidden features, they live in Todoist and Akiflow by design.
-- **Tags stay in Todoist.** Akiflow shows each task's summary and proposed project (in the description) but not the labels. Your triage information is in the text.
-- **Only new activity syncs.** Tasks created or edited after the Todoist-Akiflow connection flow across; old untouched tasks stay where they are until you touch them.
-- **Deleting in Akiflow never deletes in Todoist.** Complete or reject instead of deleting when it matters.
-- **One scheduler per space.** Akiflow owns work blocks. If another tool also auto-blocks your calendar, give it a separate lane (personal habits, for example) or the two will fight over the same free hours.
+- **Nothing fails silently.** When tasks stop reaching Akiflow, or the agent stops running, Today shows a red line saying so.
+- **Updates.** Settings › Updates lists every release with what changed. Kara offers a new version when it starts and every 6 hours; "Update & restart" installs it.
+- **Usage.** Kara counts which features you use (names and counts only, never what you write). One switch in Settings turns it off.
+- **Two Macs.** Your notes and settings sync between Macs. Which project a meeting belongs to is kept on each Mac for now.
