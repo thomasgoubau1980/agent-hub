@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.25",
+    "date": "2026-11-11",
+    "title": "One Day page for every day",
+    "url": "./kara/updates.html#v0.4.0-beta.25"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.24",
     "date": "2026-11-04",
     "title": "The user guide's Agent Hub link opens the guide",
