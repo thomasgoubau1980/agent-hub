@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.28",
+    "date": "2026-11-11",
+    "title": "Meeting summaries on your day read like the open meeting",
+    "url": "./kara/updates.html#v0.4.0-beta.28"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.27",
     "date": "2026-11-11",
     "title": "Write your meeting notes during the meeting, in one note",
