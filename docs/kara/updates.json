@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.27",
+    "date": "2026-11-11",
+    "title": "Write your meeting notes during the meeting, in one note",
+    "url": "./kara/updates.html#v0.4.0-beta.27"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.26",
     "date": "2026-11-11",
     "title": "Past days look like today, and a meeting opens as a note",
