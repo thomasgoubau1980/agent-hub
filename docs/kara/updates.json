@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.26",
+    "date": "2026-11-11",
+    "title": "Past days look like today, and a meeting opens as a note",
+    "url": "./kara/updates.html#v0.4.0-beta.26"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.25",
     "date": "2026-11-11",
     "title": "One Day page for every day",
