@@ -40,7 +40,7 @@ Every free text in Kara is a paper, and the same line rules work everywhere:
 - "! " is a decision.
 - "# " and "## " are headings; they build the outline on the side.
 
-Press **⌘J**, or **Write** at the top of the sidebar, on any screen. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a **Page** beside Today, or **Full** for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. The mic on the paper adds what you say as a new line.
+Press **⌘J**, or **Write** at the top of the sidebar, on any screen. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a **Page** beside Today, or **Full** for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. A page is a note of your own: closing it takes it off the paper's tabs, and it stays in **Notes**. The mic on the paper adds what you say as a new line.
 
 A line is handed on once, when you press Enter at its end or hide the paper, so nothing is sent twice. Every note is also saved to the Notes database in your Notion a few seconds after you stop typing. A note you made can be deleted, with Undo for 8 seconds; its Notion copy goes to Notion's trash.
 
@@ -74,6 +74,25 @@ Click a project's name to open its page:
 ## Project codes
 
 Every project has a short code of three or four capitals, and every action's title starts with it. Akiflow brings actions over from Notion without their project, so the code is how Kara keeps Notion and Akiflow in step. Keep the code when you edit a title.
+
+# Notes
+
+**Notes** in the Kara menu, under Projects, keeps every note you have written in one place. On the Mac, ⌘⇧N opens it.
+
+- **Your notes** come first: notes that belong to no day or meeting. Pinned ones are on top, then the most recently changed.
+- **Day and meeting notes** follow, newest first. They still live on their day and meeting; Notes lets you find them and opens them full page.
+- **Search**, at the top, looks through every note, names and text, ignoring capitals and accents. Each result shows the line that matches.
+
+Tap **New note** to start one. A blank page opens with the cursor on the first line, and that line becomes the note's name. Everything from the day's note works here: Aa for the font and page, the format bar, the Apple Pencil, and the line rules ("+ " a task, "@name" a waiting-for, "! " a decision). A "+ " line reaches your Akiflow Inbox with "From the note:" and the note's name. A note you close without writing in it is not kept.
+
+Under each of your notes:
+
+- **Pin** keeps it at the top.
+- **Link to a project** puts it on that project's page too, and its "+ " lines become the project's next actions.
+- **Delete** removes it, with Undo for a few seconds; its Notion copy goes to Notion's trash.
+- **Only on this device** shows while a note has not reached the Kara cloud (signed out, or offline). It goes once the note is synced.
+
+<!-- screenshot: Notes on the iPhone, list with search -->
 
 # Review
 
