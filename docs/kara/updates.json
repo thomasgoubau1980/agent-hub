@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.33",
+    "date": "2026-11-20",
+    "title": "Notes of their own, in one Notes place",
+    "url": "./kara/updates.html#v0.4.0-beta.33"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.32",
     "date": "2026-11-12",
     "title": "The full-page note clears the iPhone Duo's clock",
