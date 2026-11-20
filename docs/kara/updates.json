@@ -1,6 +1,13 @@
 [
   {
     "agent": "kara",
+    "version": "0.4.0-beta.34",
+    "date": "2026-11-20",
+    "title": "A shorter menu, and Notes one tap from today",
+    "url": "./kara/updates.html#v0.4.0-beta.34"
+  },
+  {
+    "agent": "kara",
     "version": "0.4.0-beta.33",
     "date": "2026-11-20",
     "title": "Notes of their own, in one Notes place",

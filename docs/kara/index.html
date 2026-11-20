@@ -124,7 +124,7 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
   <span class="eyebrow">Kara · User guide</span>
   <h1>Kara</h1>
   <p class="lede">Deep Focus productivity. One place for today's priorities, agenda, inbox triage and weekly review, on Mac, iPhone and iPad, with a Telegram agent doing the legwork.</p>
-  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.4.0-beta.33</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
+  <div class="strip"><span class="badge acc">live</span><span class="badge">latest: v0.4.0-beta.34</span><a class="badge" href="updates.html" style="text-decoration:none">release notes →</a></div>
 </header>
 <h1 id="what-kara-is">What Kara is</h1>
 <p>Kara is your day companion on the Mac. It answers one question all day: what should I be doing right now, and where does this thought go? It doesn't replace your other tools. Each tool keeps one job:</p>
@@ -133,7 +133,11 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <h1 id="getting-set-up">Getting set up</h1>
 <p>Open <strong>Settings</strong> and connect, once per Mac:</p>
 <ol><li><strong>Akiflow.</strong> Today then shows your Akiflow blocks with their tasks, and everything you write as a task lands in your Akiflow Inbox.</li><li><strong>Notion.</strong> Sign in with the account that holds your projects. Projects, project pages and notes then work.</li><li><strong>Google Calendar</strong> for your meetings, and <strong>Todoist</strong> for the team's actions and Kara's suggestions.</li></ol>
-<p>The bottom of the sidebar shows each connection: green when it works, the time it last read, or "error" with the reason when you hover.</p>
+<p>The bottom of the Kara menu shows one line for all four: "All connected" with a green dot when everything works, or the name of the service that needs you, in red. Tap it to open Settings, where each service shows its own status, the time it last read and any error.</p>
+<h1 id="finding-your-way">Finding your way</h1>
+<p>Kara opens on today. The <strong>Kara logo</strong> at the top left, the one with the small badge, opens the menu. It lists the places you can go:</p>
+<ul><li><strong>Search</strong> (⌘K): meetings, decisions and tasks, recurring meetings included.</li><li><strong>Projects</strong>: your Notion projects and their next actions.</li><li><strong>Notes</strong> (⌘⇧N on the Mac): every note you have written.</li><li><strong>Triage</strong>: Kara's suggestions that are not tied to a meeting.</li><li><strong>Settings</strong>: your connections, the release notes and this guide.</li></ul>
+<p>Every other screen has a <strong>‹ Today</strong> button at the top to bring you back. Today's note also has an <strong>All notes</strong> button that opens Notes.</p>
 <h1 id="today">Today</h1>
 <p>Today is where Kara opens. The header switches between three views:</p>
 <ul><li><strong>Schedule</strong>: the list of your day, opened at the current hour.</li><li><strong>Day</strong>: the day on a time grid, each block as long as it really is.</li><li><strong>Notes</strong>: the whole day as one notebook page, item by item.</li></ul>
@@ -141,14 +145,14 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <h1 id="writing-the-paper">Writing: the paper</h1>
 <p>Every free text in Kara is a paper, and the same line rules work everywhere:</p>
 <ul><li>A plain line is a note.</li><li>A line starting with "+ " is a task. On today's paper it goes to your Akiflow Inbox; on a project's note, or a meeting that belongs to a project, it becomes that project's next action.</li><li>"@name" is something you wait on from someone.</li><li>"! " is a decision.</li><li>"# " and "## " are headings; they build the outline on the side.</li></ul>
-<p>Press <strong>⌘J</strong>, or <strong>Write</strong> at the top of the sidebar, on any screen. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a <strong>Page</strong> beside Today, or <strong>Full</strong> for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. A page is a note of your own: closing it takes it off the paper's tabs, and it stays in <strong>Notes</strong>. The mic on the paper adds what you say as a new line.</p>
+<p>Press <strong>⌘J</strong> on any screen, or on the iPhone tap the yellow <strong>Note</strong> button. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a <strong>Page</strong> beside Today, or <strong>Full</strong> for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. A page is a note of your own: closing it takes it off the paper's tabs, and it stays in <strong>Notes</strong>. The mic on the paper adds what you say as a new line.</p>
 <p>A line is handed on once, when you press Enter at its end or hide the paper, so nothing is sent twice. Every note is also saved to the Notes database in your Notion a few seconds after you stop typing. A note you made can be deleted, with Undo for 8 seconds; its Notion copy goes to Notion's trash.</p>
 <h1 id="meetings">Meetings</h1>
 <p>The live meeting's notes are a tab on the paper. <strong>Meeting mode</strong> (the button on the live meeting card, or ⌃⌥M from any app) shrinks Kara to a narrow window beside the call, kept on top.</p>
 <p>Every meeting has a <strong>+ Project</strong> chip. Put a meeting on a project once, and Kara asks whether the next meetings in the series keep it. Its notes then show on the project's page, and its "+ " lines become that project's next actions.</p>
 <p>After the meeting, its details show the Fathom or Granola summary, your tasks, the decision, your notes and a link to the recording.</p>
 <h1 id="projects">Projects</h1>
-<p><strong>Projects</strong> in the sidebar shows every active project from your Notion as a card with its next actions.</p>
+<p><strong>Projects</strong> in the Kara menu shows every active project from your Notion as a card with its next actions.</p>
 <ul><li><strong>Add a next action</strong> by typing under a project and pressing Enter. It is saved in Notion with the project's code (for example "[BRD] Send the pre-read"), reaches your Akiflow Inbox within a few minutes, and Kara files it under the matching Akiflow project. A small "to Akiflow" dot shows until it has arrived.</li><li><strong>Tick it off</strong> here or in Akiflow: it is done in both.</li><li><strong>Later, Done or Drop</strong> from the ••• on a project. Later projects fold at the bottom.</li><li><strong>+ New project</strong> needs only a name. Kara makes the code and creates it in Notion. If Akiflow has no project with that name yet, Kara tells you once, with a "Copy name" button.</li></ul>
 <h2 id="a-project-s-page">A project's page</h2>
 <p>Click a project's name to open its page:</p>
@@ -156,7 +160,7 @@ footer { margin-top:80px; padding-top:20px; border-top:1px solid var(--line);
 <h2 id="project-codes">Project codes</h2>
 <p>Every project has a short code of three or four capitals, and every action's title starts with it. Akiflow brings actions over from Notion without their project, so the code is how Kara keeps Notion and Akiflow in step. Keep the code when you edit a title.</p>
 <h1 id="notes">Notes</h1>
-<p><strong>Notes</strong> in the Kara menu, under Projects, keeps every note you have written in one place. On the Mac, ⌘⇧N opens it.</p>
+<p><strong>Notes</strong> in the Kara menu, under Projects, keeps every note you have written in one place. On the Mac, ⌘⇧N opens it. You can also open it from today's note: tap <strong>All notes</strong> in its header.</p>
 <ul><li><strong>Your notes</strong> come first: notes that belong to no day or meeting. Pinned ones are on top, then the most recently changed.</li><li><strong>Day and meeting notes</strong> follow, newest first. They still live on their day and meeting; Notes lets you find them and opens them full page.</li><li><strong>Search</strong>, at the top, looks through every note, names and text, ignoring capitals and accents. Each result shows the line that matches.</li></ul>
 <p>Tap <strong>New note</strong> to start one. A blank page opens with the cursor on the first line, and that line becomes the note's name. Everything from the day's note works here: Aa for the font and page, the format bar, the Apple Pencil, and the line rules ("+ " a task, "@name" a waiting-for, "! " a decision). A "+ " line reaches your Akiflow Inbox with "From the note:" and the note's name. A note you close without writing in it is not kept.</p>
 <p>Under each of your notes:</p>

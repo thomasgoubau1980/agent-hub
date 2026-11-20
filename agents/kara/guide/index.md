@@ -18,7 +18,19 @@ Open **Settings** and connect, once per Mac:
 2. **Notion.** Sign in with the account that holds your projects. Projects, project pages and notes then work.
 3. **Google Calendar** for your meetings, and **Todoist** for the team's actions and Kara's suggestions.
 
-The bottom of the sidebar shows each connection: green when it works, the time it last read, or "error" with the reason when you hover.
+The bottom of the Kara menu shows one line for all four: "All connected" with a green dot when everything works, or the name of the service that needs you, in red. Tap it to open Settings, where each service shows its own status, the time it last read and any error.
+
+# Finding your way
+
+Kara opens on today. The **Kara logo** at the top left, the one with the small badge, opens the menu. It lists the places you can go:
+
+- **Search** (⌘K): meetings, decisions and tasks, recurring meetings included.
+- **Projects**: your Notion projects and their next actions.
+- **Notes** (⌘⇧N on the Mac): every note you have written.
+- **Triage**: Kara's suggestions that are not tied to a meeting.
+- **Settings**: your connections, the release notes and this guide.
+
+Every other screen has a **‹ Today** button at the top to bring you back. Today's note also has an **All notes** button that opens Notes.
 
 # Today
 
@@ -40,7 +52,7 @@ Every free text in Kara is a paper, and the same line rules work everywhere:
 - "! " is a decision.
 - "# " and "## " are headings; they build the outline on the side.
 
-Press **⌘J**, or **Write** at the top of the sidebar, on any screen. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a **Page** beside Today, or **Full** for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. A page is a note of your own: closing it takes it off the paper's tabs, and it stays in **Notes**. The mic on the paper adds what you say as a new line.
+Press **⌘J** on any screen, or on the iPhone tap the yellow **Note** button. During a meeting it opens that meeting's note; otherwise today's paper. The post-it grows as you type. Open it as a **Page** beside Today, or **Full** for a long document; Esc steps back down. "+ Page" starts a page of its own, for a briefing for example. A page is a note of your own: closing it takes it off the paper's tabs, and it stays in **Notes**. The mic on the paper adds what you say as a new line.
 
 A line is handed on once, when you press Enter at its end or hide the paper, so nothing is sent twice. Every note is also saved to the Notes database in your Notion a few seconds after you stop typing. A note you made can be deleted, with Undo for 8 seconds; its Notion copy goes to Notion's trash.
 
@@ -54,7 +66,7 @@ After the meeting, its details show the Fathom or Granola summary, your tasks, t
 
 # Projects
 
-**Projects** in the sidebar shows every active project from your Notion as a card with its next actions.
+**Projects** in the Kara menu shows every active project from your Notion as a card with its next actions.
 
 - **Add a next action** by typing under a project and pressing Enter. It is saved in Notion with the project's code (for example "[BRD] Send the pre-read"), reaches your Akiflow Inbox within a few minutes, and Kara files it under the matching Akiflow project. A small "to Akiflow" dot shows until it has arrived.
 - **Tick it off** here or in Akiflow: it is done in both.
@@ -77,7 +89,7 @@ Every project has a short code of three or four capitals, and every action's tit
 
 # Notes
 
-**Notes** in the Kara menu, under Projects, keeps every note you have written in one place. On the Mac, ⌘⇧N opens it.
+**Notes** in the Kara menu, under Projects, keeps every note you have written in one place. On the Mac, ⌘⇧N opens it. You can also open it from today's note: tap **All notes** in its header.
 
 - **Your notes** come first: notes that belong to no day or meeting. Pinned ones are on top, then the most recently changed.
 - **Day and meeting notes** follow, newest first. They still live on their day and meeting; Notes lets you find them and opens them full page.
